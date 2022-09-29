@@ -134,10 +134,8 @@ const Home = () => {
           style={{
             backgroundImage: `url(${Background})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "100vw 125vh",
-            width: "100vw",
-            height: "125vh",
           }}
+          className="lg:w-[100vw] lg:h-[125vh] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh]"
         >
           <h1 className="text-[#bdb9a5] font-bold mt-24 text-4xl text-center">
             Hi, We're Arkhan Studio
@@ -161,7 +159,7 @@ const Home = () => {
           A selection of my preferred projects I have created during the last 15
           years.
         </p>
-        <div className="flex flex-row gap-4">
+        <div className="flex lg:flex-row flex-col gap-4">
           {servicesData.map((item) => (
             <div className={`px-4 pb-4 space-y-6 flex flex-col items-center`}>
               <img
@@ -197,7 +195,7 @@ const Home = () => {
             <img src={item.src} alt="" />
           ))}
         </div>
-        <div className="flex md:flex-row flex-col gap-12">
+        <div className="flex md:grid md:grid-cols-2 flex-col gap-y-12 lg:gap-y-2 gap-x-2">
           {trackRecord.map((item) => (
             <div className="bg-[#DDD5B6] text-[#3c3a2e] text-4xl text-center p-10 font-semibold rounded-lg space-y-4">
               <h1>{item.number}</h1>
