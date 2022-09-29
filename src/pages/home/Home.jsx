@@ -190,7 +190,7 @@ const Home = () => {
         <p className="text-center nunito">
           Here are some of our masterpieces that clients love it so much!
         </p>
-        <div className="grid lg:grid-cols-6 grid-cols-2">
+        <div className="grid lg:grid-cols-6 grid-cols-2 invisible">
           {logoSrc.map((item) => (
             <img src={item.src} alt="" />
           ))}
