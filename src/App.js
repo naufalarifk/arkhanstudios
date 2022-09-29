@@ -1,8 +1,10 @@
-import './App.css';
-
+import React from "react";
+import Routing from "./routes/routes";
 function App() {
   return (
-<h1>text</h1>
+<React.Fragment>
+  <Routing/>
+</React.Fragment>
   );
 }
 
