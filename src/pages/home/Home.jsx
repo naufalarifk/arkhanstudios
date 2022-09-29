@@ -129,7 +129,7 @@ const Home = () => {
   return (
     <Wrapper>
       {/* Jumbotron */}
-      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#aaa58f]">
+      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#8BBCCC]">
         <div
           style={{
             backgroundImage: `url(${Background})`,
@@ -137,10 +137,10 @@ const Home = () => {
           }}
           className="lg:w-[100vw] lg:h-[125vh] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh]"
         >
-          <h1 className="text-[#bdb9a5] font-bold mt-24 text-4xl text-center">
+          <h1 className="text-[#bdb9a5] font-bold mt-24 text-4xl text-center invisible">
             Hi, We're Arkhan Studio
           </h1>
-          <div className="flex flex-row justify-center space-x-10 mt-10">
+          <div className="flex flex-row justify-center space-x-10 mt-10 invisible">
             <button className="hover:bg-[#bdb9a5] text-[#bdb9a5] p-2 bg-transparent hover:text-violet-800 border-[#bdb9a5] border-2 transform transition duration-500">
               <p className="font-semibold">PORTFOLIO</p>
             </button>{" "}
@@ -151,15 +151,15 @@ const Home = () => {
         </div>
       </section>
       {/* Design Services */}
-      <section className="container space-y-4 p-8 bg-[#aaa58f]">
-        <p className="mx-auto text-center p-4 text-[#3c3a2e] text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
+      <section className="container space-y-4 p-8 bg-[#8BBCCC]">
+        <p className="mx-auto text-center p-4 text-black text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           DESIGN SERVICES I PROVIDE
         </p>
-        <p className="text-center">
+        <p className="text-center nunito text-black">
           A selection of my preferred projects I have created during the last 15
           years.
         </p>
-        <div className="flex lg:flex-row flex-col gap-4">
+        <div className="flex lg:flex-row flex-col gap-4 nunito text-black">
           {servicesData.map((item) => (
             <div className={`px-4 pb-4 space-y-6 flex flex-col items-center`}>
               <img
@@ -170,10 +170,10 @@ const Home = () => {
                 src={item.picture}
                 alt=""
               />
-              <div className="space-y-2 flex flex-col">
+              <div className="space-y-2 flex flex-col nunito">
                 <h1 className="font-bold text-base text-center">{item.name}</h1>
                 <p className="text-sm text-center">{item.desc}</p>
-                <button className="mx-auto bg-transparent text-[#3c3a2e] p-2 hover:bg-transparent hover:bg-[#3c3a2e] hover:text-white border-[#3c3a2e] border-2 transform transition duration-500">
+                <button className="mx-auto bg-transparent text-black p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
                   <p className="font-semibold">MORE</p>
                 </button>
               </div>
@@ -182,12 +182,12 @@ const Home = () => {
         </div>
       </section>
       {/* Graphic Design Projects */}
-      <section className="bg-[#EDDFB3] container space-y-4 p-8 relative flex flex-col">
+      <section className="bg-[#8BBCCC] container space-y-4 p-8 relative flex flex-col text-black">
         {" "}
-        <p className="mx-auto text-center p-4 text-[#3c3a2e] text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
+        <p className="mx-auto text-center p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           PORTFOLIO
         </p>
-        <p className="text-center">
+        <p className="text-center nunito">
           Here are some of our masterpieces that clients love it so much!
         </p>
         <div className="grid lg:grid-cols-6 grid-cols-2">
@@ -195,16 +195,16 @@ const Home = () => {
             <img src={item.src} alt="" />
           ))}
         </div>
-        <div className="flex md:grid md:grid-cols-2 flex-col gap-y-12 lg:gap-y-2 gap-x-2">
+        <div className="flex md:grid md:grid-cols-2 flex-col gap-y-12 lg:gap-y-2 gap-x-2 nunito">
           {trackRecord.map((item) => (
-            <div className="bg-[#DDD5B6] text-[#3c3a2e] text-4xl text-center p-10 font-semibold rounded-lg space-y-4">
+            <div className="bg-[#4C6793] text-4xl text-center p-10 font-semibold rounded-lg space-y-4">
               <h1>{item.number}</h1>
-              <hr className="h-1 mx-auto w-[60px] bg-[#3c3a2e]" />
+              <hr className="h-1 mx-auto w-[60px] bg-black " />
               <p>{item.title}</p>
             </div>
           ))}
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 nunito">
           <h1 className="text-center text-2xl mt-20">
             NOT ENOUGH PORTFOLIO SAMPLES?
           </h1>
@@ -218,24 +218,24 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="bg-[#EDDFB3] container space-y-4 p-8 relative flex flex-col">
+      <section className="bg-[#8BBCCC] container space-y-4 p-8 relative flex flex-col">
         {" "}
-        <p className="mx-auto text-center p-4 text-[#3c3a2e] text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
+        <p className="mx-auto text-center p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
           PORTFOLIO
         </p>
-            <p className="text-center p-4 text-[#3c3a2e] text-lg font-bold">We’re illustration studio consist of 10+ passionate and talented people working in the illustration industry since 2008 started by Kudjo, our band leader.
+            <p className="text-center p-4 text-lg font-bold">We’re illustration studio consist of 10+ passionate and talented people working in the illustration industry since 2008 started by Kudjo, our band leader.
 We help small and big companies to achieve their goal using visuals. We believe that nowadays good visual is good business. We also help my fellow illustrator and designer through my blog and social media.
 </p>
       </section>
 
       {/* FAQ */}
-      <section className="container space-y-10 p-8 bg-[#E4E2DE]">
-        <p className="mx-auto text-center p-8 text-white bg-black text-lg md:text-2xl lg:text-4xl font-semibold rounded-lg">
+      <section className="container space-y-10 p-8 bg-[#8BBCCC]">
+        <p className="mx-auto text-center p-8 text-white bg-black text-lg md:text-2xl lg:text-4xl font-semibold rounded-lg inter">
           FREQUENTLY ASKED QUESTIONS
         </p>
         {/* disclosure */}
         <div className="flex lg:flex-row-reverse flex-col-reverse mt-11 gap-y-10 justify-evenly">
-          <section className="w-full lg:px-4 lg:w-[37rem] space-y-4">
+          <section className="w-full lg:px-4 lg:w-[37rem] space-y-4 nunito">
             {faqList.map((item) => (
               <Disclosure>
                 {({ open }) => (
@@ -265,7 +265,7 @@ We help small and big companies to achieve their goal using visuals. We believe 
               </Disclosure>
             ))}
           </section>
-          <div className="w-full md:w-96 md:max-w-full">
+          <div className="w-full md:w-96 md:max-w-full nunito">
             <div className="p-6 rounded-lg bg-white shadow-xl">
               <form method="POST" action="https://herotofu.com/start">
                 <label className="block mb-6">

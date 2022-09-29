@@ -9,7 +9,7 @@ function Header() {
   const [hoverTextColor, setHoverTextColor] = useState("black")
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setHoverTextColor("white") : setHoverTextColor("black");
-    window.scrollY > 10 ? setnavColor("#32312c") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavColor("#000000") : setnavColor("transparent");
     window.scrollY > 10 ? setnavSize("5rem") : setnavSize("5rem");
     window.scrollY > 10 ? setTextColor("text-white") : setTextColor("text-black");
     window.scrollY > 10 ? setWebLogo("/images/logo-mobile-01.png") : setWebLogo("/images/logo2-dark.png");
