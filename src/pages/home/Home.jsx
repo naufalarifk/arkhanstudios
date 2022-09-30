@@ -3,6 +3,8 @@ import Wrapper from "../../component/wrapper";
 import { Disclosure, Transition } from "@headlessui/react";
 import { AiFillCaretDown } from "react-icons/ai";
 import Background from "../../common/assets/jumbotron/jumbotron.png";
+import CountUp from "react-countup";
+import TrackVisibility from "react-on-screen";
 const Home = () => {
   const servicesData = [
     {
@@ -76,22 +78,54 @@ const Home = () => {
     },
   ];
   const imageSrc = [
-    { id: 1, src: require("../../common/assets/projects/1.png") },
-    { id: 2, src: require("../../common/assets/projects/2.png") },
-    { id: 3, src: require("../../common/assets/projects/3.png") },
-    { id: 4, src: require("../../common/assets/projects/4.png") },
-    { id: 5, src: require("../../common/assets/projects/5.png") },
-    { id: 6, src: require("../../common/assets/projects/6.png") },
-    { id: 7, src: require("../../common/assets/projects/7.png") },
-    { id: 8, src: require("../../common/assets/projects/8.png") },
-    { id: 9, src: require("../../common/assets/projects/9.jpg") },
-    { id: 10, src: require("../../common/assets/projects/10.jpg") },
-    { id: 11, src: require("../../common/assets/projects/11.jpg") },
-    { id: 12, src: require("../../common/assets/projects/12.png") },
-    { id: 13, src: require("../../common/assets/projects/13.png") },
-    { id: 14, src: require("../../common/assets/projects/14.jpg") },
-    { id: 15, src: require("../../common/assets/projects/15.png") },
-    { id: 16, src: require("../../common/assets/projects/16.jpg") },
+    {
+      id: 1,
+      name: "row_one",
+      images: [
+        {
+          src_one: require("../../common/assets/projects/15.png"),
+          src_two: require("../../common/assets/projects/16.jpg"),
+          src_three: require("../../common/assets/projects/7.png"),
+          src_four: require("../../common/assets/projects/8.png"),
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "row_one",
+      images: [
+        {
+          src_one: require("../../common/assets/projects/15.png"),
+          src_two: require("../../common/assets/projects/16.jpg"),
+          src_three: require("../../common/assets/projects/7.png"),
+          src_four: require("../../common/assets/projects/8.png"),
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "row_one",
+      images: [
+        {
+          src_one: require("../../common/assets/projects/15.png"),
+          src_two: require("../../common/assets/projects/16.jpg"),
+          src_three: require("../../common/assets/projects/7.png"),
+          src_four: require("../../common/assets/projects/8.png"),
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "row_one",
+      images: [
+        {
+          src_one: require("../../common/assets/projects/15.png"),
+          src_two: require("../../common/assets/projects/16.jpg"),
+          src_three: require("../../common/assets/projects/7.png"),
+          src_four: require("../../common/assets/projects/8.png"),
+        },
+      ],
+    },
   ];
 
   const logoSrc = [
@@ -129,13 +163,13 @@ const Home = () => {
   return (
     <Wrapper>
       {/* Jumbotron */}
-      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#8BBCCC]">
+      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#512995]">
         <div
           style={{
             backgroundImage: `url(${Background})`,
             backgroundRepeat: "no-repeat",
           }}
-          className="lg:w-[100vw] lg:h-[125vh] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh]"
+          className=" lg:w-[100vw] lg:h-[125vh] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh]"
         >
           <h1 className="text-[#bdb9a5] font-bold mt-24 text-4xl text-center invisible">
             Hi, We're Arkhan Studio
@@ -151,15 +185,15 @@ const Home = () => {
         </div>
       </section>
       {/* Design Services */}
-      <section className="container space-y-4 p-8 bg-[#8BBCCC]">
-        <p className="mx-auto text-center p-4 text-black text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
+      <section className="container space-y-4 p-8 bg-[#512995]">
+        <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           DESIGN SERVICES I PROVIDE
         </p>
-        <p className="text-center nunito text-black">
+        <p className="text-center nunito text-white">
           A selection of my preferred projects I have created during the last 15
           years.
         </p>
-        <div className="flex lg:flex-row flex-col gap-4 nunito text-black">
+        <div className="flex lg:flex-row flex-col gap-4 nunito text-white">
           {servicesData.map((item) => (
             <div className={`px-4 pb-4 space-y-6 flex flex-col items-center`}>
               <img
@@ -173,8 +207,8 @@ const Home = () => {
               <div className="space-y-2 flex flex-col nunito">
                 <h1 className="font-bold text-base text-center">{item.name}</h1>
                 <p className="text-sm text-center">{item.desc}</p>
-                <button className="mx-auto bg-transparent text-black p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
-                  <p className="font-semibold">MORE</p>
+                <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
+                  <p className="font-semibold text-xs">MORE</p>
                 </button>
               </div>
             </div>
@@ -182,7 +216,7 @@ const Home = () => {
         </div>
       </section>
       {/* Graphic Design Projects */}
-      <section className="bg-[#8BBCCC] container space-y-4 p-8 relative flex flex-col text-black">
+      <section className="bg-[#512995] container space-y-4 p-8 relative flex flex-col text-white">
         {" "}
         <p className="mx-auto text-center p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           PORTFOLIO
@@ -190,15 +224,37 @@ const Home = () => {
         <p className="text-center nunito">
           Here are some of our masterpieces that clients love it so much!
         </p>
+        <div className="gap-0 grid grid-cols-4">
+          {imageSrc.map((item) => (
+            <div className="flex flex-col">
+              {item.images.map((image) => (
+                <>
+                  <img src={image.src_one} alt="" />
+                  <img src={image.src_two} alt="" />
+                  <img src={image.src_three} alt="" />
+                  <img src={image.src_four} alt="" />
+                </>
+              ))}
+            </div>
+          ))}
+        </div>
         <div className="grid lg:grid-cols-6 grid-cols-2 invisible">
           {logoSrc.map((item) => (
             <img src={item.src} alt="" />
           ))}
         </div>
-        <div className="flex md:grid md:grid-cols-2 flex-col gap-y-12 lg:gap-y-2 gap-x-2 nunito">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 lg:gap-y-2 gap-x-2 nunito">
           {trackRecord.map((item) => (
             <div className="bg-[#4C6793] text-4xl text-center p-10 font-semibold rounded-lg space-y-4">
-              <h1>{item.number}</h1>
+              <TrackVisibility once>
+                {({ isVisible }) => (
+                  <span className="number count">
+                    {isVisible ? (
+                      <CountUp end={item.number} duration={1} />
+                    ) : null}
+                  </span>
+                )}
+              </TrackVisibility>
               <hr className="h-1 mx-auto w-[60px] bg-black " />
               <p>{item.title}</p>
             </div>
@@ -213,24 +269,42 @@ const Home = () => {
             in progress images.
           </p>
         </div>
-        <button className="mx-auto rounded-lg bg-black text-white p-2 hover:bg-transparent hover:text-black border-black border-2 transform transition duration-500">
+        <button className="mx-auto rounded-lg bg-black text-white p-2 hover:bg-transparent hover:text-white border-black border-2 transform transition duration-500">
           <p className="font-semibold">VISIT MY PORTOFOLIO</p>
         </button>
       </section>
-
-      <section className="bg-[#8BBCCC] container space-y-4 p-8 relative flex flex-col">
+      <section className="flex md:flex-col lg:flex-row items-center p-24 bg-[#512995] text-white">
+        <img className="w-[300px] h-[300px]" src="images/school-b.png" />
+        <div>
+          <h1 className="text-3xl font-bold text-center lg:text-left">ABOUT US</h1>
+          <p className="lg:text-left text-center">
+            We’re illustration studio consist of 10+ passionate and talented
+            people working in the illustration industry since 2008 started by
+            Kudjo, our band leader. We help small and big companies to achieve
+            their goal using visuals. We believe that nowadays good visual is
+            good business. We also help my fellow illustrator and designer
+            through my blog and social media.
+          </p>
+        </div>
+      </section>
+      <section className="bg-[#512995] container space-y-4 p-8 relative flex flex-col">
         {" "}
-        <p className="mx-auto text-center p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
+        <p className="mx-auto text-center text-white p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
           PORTFOLIO
         </p>
-            <p className="text-center p-4 text-lg font-bold">We’re illustration studio consist of 10+ passionate and talented people working in the illustration industry since 2008 started by Kudjo, our band leader.
-We help small and big companies to achieve their goal using visuals. We believe that nowadays good visual is good business. We also help my fellow illustrator and designer through my blog and social media.
-</p>
+        <p className="text-center p-4 text-lg font-bold text-white">
+          We’re illustration studio consist of 10+ passionate and talented
+          people working in the illustration industry since 2008 started by
+          Kudjo, our band leader. We help small and big companies to achieve
+          their goal using visuals. We believe that nowadays good visual is good
+          business. We also help my fellow illustrator and designer through my
+          blog and social media.
+        </p>
       </section>
 
       {/* FAQ */}
-      <section className="container space-y-10 p-8 bg-[#8BBCCC]">
-        <p className="mx-auto text-center p-8 text-white bg-black text-lg md:text-2xl lg:text-4xl font-semibold rounded-lg inter">
+      <section className="container space-y-10 p-8 bg-[#512995]">
+        <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           FREQUENTLY ASKED QUESTIONS
         </p>
         {/* disclosure */}
@@ -245,7 +319,7 @@ We help small and big companies to achieve their goal using visuals. We believe 
                       <AiFillCaretDown
                         className={`${
                           open ? "rotate-180 transform" : ""
-                        } h-4 w-4 text-black`}
+                        } h-4 w-4 text-white`}
                       />
                     </Disclosure.Button>
                     <Transition
@@ -265,83 +339,95 @@ We help small and big companies to achieve their goal using visuals. We believe 
               </Disclosure>
             ))}
           </section>
-          <div className="w-full md:w-96 md:max-w-full nunito">
-            <div className="p-6 rounded-lg bg-white shadow-xl">
-              <form method="POST" action="https://herotofu.com/start">
-                <label className="block mb-6">
-                  <span className="text-gray-700">Your name</span>
-                  <input
-                    type="text"
-                    name="name"
-                    className="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                    placeholder="Enter Your Name"
-                  />
-                </label>
-                <label className="block mb-6">
-                  <span className="text-gray-700">Email address</span>
-                  <input
-                    name="email"
-                    type="email"
-                    className="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                    placeholder="Enter Your Email"
-                    required
-                  />
-                </label>
-                <label class="block mb-6">
-                  <span class="text-gray-700">Message</span>
-                  <textarea
-                    name="message"
-                    class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                    rows="3"
-                    placeholder="Tell us what you're thinking about..."
-                  ></textarea>
-                </label>
-                <div class="mb-6">
-                  <button
-                    type="submit"
-                    className="mx-auto bg-black text-white p-2 hover:bg-transparent hover:text-black border-black border-2 transform transition duration-500 rounded-lg"
-                  >
-                    <p className="font-semibold">CONTACT US</p>
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div className="flex flex-col space-y-6">
+            <h1 className="text-2xl text-center font-bold text-white nunito">
+              If you have any questions please contact me
+            </h1>
+            <img
+              className="mx-auto"
+              src={require("../../common/assets/faq/professa.png")}
+            />
+            <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
+              <p className="font-semibold text-xl">CONTACT ME</p>
+            </button>
           </div>
         </div>
       </section>
+      <div className="w-full md:w-96 md:max-w-full nunito hidden">
+        <div className="p-6 rounded-lg bg-white shadow-xl">
+          <form method="POST" action="https://herotofu.com/start">
+            <label className="block mb-6">
+              <span className="text-gray-700">Your name</span>
+              <input
+                type="text"
+                name="name"
+                className="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          "
+                placeholder="Enter Your Name"
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Email address</span>
+              <input
+                name="email"
+                type="email"
+                className="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          "
+                placeholder="Enter Your Email"
+                required
+              />
+            </label>
+            <label class="block mb-6">
+              <span class="text-gray-700">Message</span>
+              <textarea
+                name="message"
+                class="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          "
+                rows="3"
+                placeholder="Tell us what you're thinking about..."
+              ></textarea>
+            </label>
+            <div class="mb-6">
+              <button
+                type="submit"
+                className="mx-auto bg-black text-white p-2 hover:bg-transparent hover:text-white border-black border-2 transform transition duration-500 rounded-lg"
+              >
+                <p className="font-semibold">CONTACT US</p>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </Wrapper>
   );
 };

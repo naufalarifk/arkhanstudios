@@ -3,15 +3,15 @@ import { BsDribbble, BsInstagram, BsBehance, BsFacebook, BsYoutube } from "react
 import { Link } from "react-router-dom";
 function Header() {
   const [navSize, setnavSize] = useState("5rem");
-  const [navColor, setnavColor] = useState("transparent");
+  const [navColor, setnavColor] = useState("#000000");
   const [webLogo, setWebLogo] = useState("/images/logo2-dark.png")
-  const [textColor, setTextColor] = useState("text-black")
+  const [textColor, setTextColor] = useState("text-white")
   const [hoverTextColor, setHoverTextColor] = useState("black")
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setHoverTextColor("white") : setHoverTextColor("black");
-    window.scrollY > 10 ? setnavColor("#000000") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavColor("#000000") : setnavColor("#000000");
     window.scrollY > 10 ? setnavSize("5rem") : setnavSize("5rem");
-    window.scrollY > 10 ? setTextColor("text-white") : setTextColor("text-black");
+    window.scrollY > 10 ? setTextColor("text-white") : setTextColor("text-white");
     window.scrollY > 10 ? setWebLogo("/images/logo-mobile-01.png") : setWebLogo("/images/logo2-dark.png");
   };
   useEffect(() => {
