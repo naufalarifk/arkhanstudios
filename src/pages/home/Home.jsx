@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../../component/wrapper";
 import { Disclosure, Transition } from "@headlessui/react";
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
 import Background from "../../common/assets/jumbotron/jumbotron.png";
 import CountUp from "react-countup";
 import TrackVisibility from "react-on-screen";
@@ -243,9 +243,9 @@ const Home = () => {
             <img src={item.src} alt="" />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 lg:gap-y-2 gap-x-2 nunito">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 lg:gap-y-2 gap-x-6 nunito">
           {trackRecord.map((item) => (
-            <div className="bg-[#4C6793] text-4xl text-center p-10 font-semibold rounded-lg space-y-4">
+            <div className="bg-[#8076ca] text-4xl text-center p-10 font-semibold space-y-4">
               <TrackVisibility once>
                 {({ isVisible }) => (
                   <span className="number count">
@@ -273,9 +273,9 @@ const Home = () => {
           <p className="font-semibold">VISIT MY PORTOFOLIO</p>
         </button>
       </section>
-      <section className="flex md:flex-col lg:flex-row items-center p-24 bg-[#512995] text-white">
+      <section className="flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
         <img className="w-[300px] h-[300px]" src="images/school-b.png" />
-        <div>
+        <div className="lg:w-[50%] w-full">
           <h1 className="text-3xl font-bold text-center lg:text-left">ABOUT US</h1>
           <p className="lg:text-left text-center">
             We’re illustration studio consist of 10+ passionate and talented
@@ -287,21 +287,6 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="bg-[#512995] container space-y-4 p-8 relative flex flex-col">
-        {" "}
-        <p className="mx-auto text-center text-white p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg">
-          PORTFOLIO
-        </p>
-        <p className="text-center p-4 text-lg font-bold text-white">
-          We’re illustration studio consist of 10+ passionate and talented
-          people working in the illustration industry since 2008 started by
-          Kudjo, our band leader. We help small and big companies to achieve
-          their goal using visuals. We believe that nowadays good visual is good
-          business. We also help my fellow illustrator and designer through my
-          blog and social media.
-        </p>
-      </section>
-
       {/* FAQ */}
       <section className="container space-y-10 p-8 bg-[#512995]">
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">

@@ -32,13 +32,13 @@ function Header() {
           className="px-4 lg:px-6"
         >
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="#" className="flex items-center">
+            <Link to='/' className="flex items-center">
               <img
                 src={webLogo}
                 className="mr-3 h-20"
                 alt="SosFactory Logo"
               />
-            </a>
+            </Link>
             <div className={`flex items-center lg:order-2 gap-3 ${textColor}`}>
                 <BsInstagram/>
                 <BsDribbble/>
@@ -86,7 +86,7 @@ function Header() {
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <Link
-                    href="#"
+                    to='/portfolio'
                     className={`${textColor} block py-2 font-semibold pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0`}
                     aria-current="page"
                   >
@@ -95,7 +95,7 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    to='/blogs'
                     className="block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     BLOG
@@ -103,7 +103,7 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    to='/about'
                     className={`block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-${hoverTextColor} dark:hover:bg-gray-700 dark:hover:text-${hoverTextColor} lg:dark:hover:bg-transparent dark:border-gray-700`}
                   >
                     ABOUT
@@ -111,7 +111,7 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    to='/contact'
                     className={`block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-${hoverTextColor} dark:hover:bg-gray-700 dark:hover:text-${hoverTextColor} lg:dark:hover:bg-transparent dark:border-gray-700`}
                   >
                     CONTACT
