@@ -3,8 +3,7 @@ import Wrapper from "../../component/wrapper";
 import { Disclosure, Transition } from "@headlessui/react";
 import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
 import Background from "../../common/assets/jumbotron/jumbotron.png";
-import CountUp from "react-countup";
-import TrackVisibility from "react-on-screen";
+import NumberCount from "../../component/utils/numbercount/NumberCount";
 const Home = () => {
   const servicesData = [
     {
@@ -243,23 +242,7 @@ const Home = () => {
             <img src={item.src} alt="" />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 lg:gap-y-2 gap-x-6 nunito">
-          {trackRecord.map((item) => (
-            <div className="bg-[#8076ca] text-4xl text-center p-10 font-semibold space-y-4">
-              <TrackVisibility once>
-                {({ isVisible }) => (
-                  <span className="number count">
-                    {isVisible ? (
-                      <CountUp end={item.number} duration={1} />
-                    ) : null}
-                  </span>
-                )}
-              </TrackVisibility>
-              <hr className="h-1 mx-auto w-[60px] bg-black " />
-              <p>{item.title}</p>
-            </div>
-          ))}
-        </div>
+        <NumberCount trackRecord={trackRecord}/>
         <div className="space-y-4 nunito">
           <h1 className="text-center text-2xl mt-20">
             NOT ENOUGH PORTFOLIO SAMPLES?
@@ -274,7 +257,7 @@ const Home = () => {
         </button>
       </section>
       <section className="flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
-        <img className="w-[300px] h-[300px]" src="images/school-b.png" />
+        <img className="w-[300px] h-[300px]" src="images/school-b.png" alt="" />
         <div className="lg:w-[50%] w-full">
           <h1 className="text-3xl font-bold text-center lg:text-left">ABOUT US</h1>
           <p className="lg:text-left text-center">
@@ -331,6 +314,7 @@ const Home = () => {
             <img
               className="mx-auto"
               src={require("../../common/assets/faq/professa.png")}
+              alt=''
             />
             <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
               <p className="font-semibold text-xl">CONTACT ME</p>
