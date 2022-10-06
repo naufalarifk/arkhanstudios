@@ -36,10 +36,10 @@ const Faq = () => {
       ];
   return (
     <Wrapper>
-      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] text-white">
+      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row space-y-8 justify-between bg-[#512995] text-white">
         <Sidebar/>
         <section className="w-full lg:w-[70%]">
-          <h1 className="font-bold text-4xl">Frequently Asked Question</h1>
+          <h1 className="font-bold text-3xl lg:text-4xl">Frequently Asked Question</h1>
           <div className="mt-6">
           <section className="w-full lg:w-[37rem] space-y-4 nunito text-black">
             {faqList.map((item) => (

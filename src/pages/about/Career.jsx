@@ -5,10 +5,10 @@ import Wrapper from "../../component/wrapper";
 const Career = () => {
   return (
     <Wrapper>
-      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] text-white">
+      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row space-y-8 justify-between bg-[#512995] text-white">
         <Sidebar />
         <section className="w-full lg:w-[70%]">
-          <h1 className="font-bold text-4xl">My Freelance Career</h1>
+          <h1 className="font-bold text-3xl lg:text-4xl">My Freelance Career</h1>
           <p className="mt-6">
             It all started in 2008 when joining a creative community that
             focuses on creating visual businesses in Indonesia. My first task at

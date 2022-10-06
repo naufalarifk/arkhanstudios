@@ -24,8 +24,8 @@ const blogItems = [
 const Blog = () => {
   return (
     <Wrapper>
-        <section className='container p-16 flex flex-row justify-between bg-[#512995] text-white'>
-          <div className='grid grid-cols-2 w-3/4 gap-8'>
+        <section className='container p-2 lg:p-16 flex flex-row justify-between bg-[#512995] text-white'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 mx-auto w-3/4 gap-8'>
           {blogItems.map((item)=>
           <div>
             <img src={item.src} alt=''/>

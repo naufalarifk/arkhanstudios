@@ -4,7 +4,7 @@ import Wrapper from "../../component/wrapper";
 const Contact = () => {
   return (
     <Wrapper>
-      <section className="container p-16 flex flex-row justify-between bg-[#512995] gap-x-20">
+      <section className="container p-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] gap-y-10 gap-x-20">
         <div className="w-full md:w-1/2 md:max-w-full nunito">
           <div className="p-6 rounded-lg bg-white shadow-xl">
             <form method="POST" action="https://herotofu.com/start">
@@ -80,7 +80,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="flex flex-row text-white p-4 bg-[#663cb0] items-center">
+        <div className="flex flex-col lg:flex-row text-white p-4 bg-[#663cb0] items-center">
         <img className="h-[200px] w-[300px]" src={require('../../common/assets/faq/professor-thumbs-up3.png')} />
         <p>please, help me to identify serious business inquiries by taking in consideration the following points.</p>
         </div>
