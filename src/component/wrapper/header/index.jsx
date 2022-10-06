@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BsDribbble, BsInstagram, BsBehance, BsFacebook, BsYoutube } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Header() {
+  const {pathname} = useLocation();
+  const splitLocation = pathname.split("/");
   const [navSize, setnavSize] = useState("5rem");
   const [navColor, setnavColor] = useState("#000000");
   const [webLogo, setWebLogo] = useState("/images/logo2-dark.png")
@@ -83,11 +85,11 @@ function Header() {
               className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-2 lg:mt-0">
                 <li>
                   <Link
-                    to='/portfolio'
-                    className={`${textColor} block py-2 font-semibold pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0`}
+                    to='/mascot-design'
+                    className={`${splitLocation[1] === 'mascot-design' || splitLocation[1] === 'tee-design' || splitLocation[1] === 'kawai-design' ? 'text-white' : 'text-gray-400'} block py-2 font-semibold pr-4 pl-3`}
                     aria-current="page"
                   >
                     PORTFOLIO
@@ -96,7 +98,7 @@ function Header() {
                 <li>
                   <Link
                     to='/blogs'
-                    className="block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className={`${splitLocation[1] === 'blogs' ? 'text-white' : 'text-gray-400'} block py-2 font-semibold pr-4 pl-3`}
                   >
                     BLOG
                   </Link>
@@ -104,7 +106,7 @@ function Header() {
                 <li>
                   <Link
                     to='/about'
-                    className={`block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-${hoverTextColor} dark:hover:bg-gray-700 dark:hover:text-${hoverTextColor} lg:dark:hover:bg-transparent dark:border-gray-700`}
+                    className={`${splitLocation[1] === 'about' ? 'text-white' : 'text-gray-400'} block py-2 font-semibold pr-4 pl-3`}
                   >
                     ABOUT
                   </Link>
@@ -112,7 +114,7 @@ function Header() {
                 <li>
                   <Link
                     to='/contact'
-                    className={`block py-2 font-semibold pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-${hoverTextColor} dark:hover:bg-gray-700 dark:hover:text-${hoverTextColor} lg:dark:hover:bg-transparent dark:border-gray-700`}
+                    className={`${splitLocation[1] === 'contact' ? 'text-white' : 'text-gray-400'} block py-2 font-semibold pr-4 pl-3`}
                   >
                     CONTACT
                   </Link>

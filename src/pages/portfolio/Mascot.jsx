@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import NumberCount from "../../component/utils/numbercount/NumberCount";
 import Showcase from "../../component/utils/showcase/Showcase";
 import Wrapper from "../../component/wrapper";
+import { Link } from "react-router-dom";
+import Portonav from "../../component/utils/portonav/Portonav";
 
-const Portfolio = () => {
+const Mascot = () => {
   const mascot_design = [
     {
       alt: "",
@@ -104,50 +106,13 @@ const Portfolio = () => {
           <p className="mx-auto text-center p-4 text-white">
             Developing the art of creating cartoon logos for more than 15 years.
           </p>
-          <div className="flex flex-row gap-5 mx-auto">
-            <button
-              onClick={() => setPage(mascot_design, "mascot_design")}
-              className={`mx-auto w-1/3 ${
-                activeTitle === "mascot_design"
-                  ? "bg-[#5C2E7E] border-[#5C2E7E]"
-                  : "bg-transparent"
-              } text-white p-2 hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500`}
-            >
-              <p className="font-semibold text-lg">
-                MASCOT DESIGN
-              </p>
-            </button>
-            <button
-              onClick={() => setPage(tee_design, "tee_design")}
-              className={`mx-auto w-1/3 ${
-                activeTitle === "tee_design"
-                  ? "bg-[#5C2E7E] border-[#5C2E7E]"
-                  : "bg-transparent"
-              } bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500`}
-            >
-              <p className="font-semibold text-lg">
-                T-SHIRT DESIGN
-              </p>
-            </button>
-            <button
-              // onClick={()=> setActivePage('kawai-chibi')}
-              className={`mx-auto w-1/3 ${
-                activePage === "kawai-chibi"
-                  ? "bg-[#5C2E7E] border-[#5C2E7E]"
-                  : "bg-transparent"
-              } bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500`}
-            >
-              <p className="font-semibold text-lg">
-                KAWAII <br /> CHIBI
-              </p>
-            </button>
-          </div>
-          <Showcase item={activePage} />
+          <Portonav/>
+          <Showcase item={mascot_design} />
         </div>
-        <NumberCount trackRecord={trackRecord}/>
+        <NumberCount trackRecord={trackRecord} />
       </section>
     </Wrapper>
   );
 };
 
-export default Portfolio;
+export default Mascot;
