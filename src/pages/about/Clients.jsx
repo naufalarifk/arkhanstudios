@@ -5,9 +5,9 @@ import Wrapper from "../../component/wrapper";
 const Clients = () => {
   return (
     <Wrapper>
-      <section className="container p-16 flex flex-row justify-between bg-[#512995] text-white">
+      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] text-white">
         <Sidebar/>
-        <section className="w-[70%]">
+        <section className="w-full lg:w-[70%]">
           <h1 className="font-bold text-4xl">Happy Clients</h1>
           <p className="mt-6">
             We’re illustration studio consist of 10+ passionate and talented

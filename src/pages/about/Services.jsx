@@ -5,7 +5,7 @@ import Wrapper from "../../component/wrapper";
 const Services = () => {
   return (
     <Wrapper>
-      <section className="container p-16 flex lg:flex-row flex-col justify-between bg-[#512995] text-white">
+      <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] text-white">
         <Sidebar />
         <section className="lg:w-[70%] w-full">
           <h1 className="font-bold text-4xl">Services We Provide</h1>
