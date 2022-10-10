@@ -5,7 +5,7 @@ function Portonav() {
     const {pathname} = useLocation();
     const splitLocation = pathname.split("/");
     return (
-    <div className="flex flex-row gap-5 mx-auto">
+    <div className="flex flex-row gap-2 lg:gap-5 mx-4 lg:mx-auto">
     <Link
       to="/mascot-design"
       className={`mx-auto ${

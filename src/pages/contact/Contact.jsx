@@ -6,7 +6,7 @@ const Contact = () => {
     <Wrapper>
       <section className="container p-8 lg:p-16 flex flex-col lg:flex-row justify-between bg-[#512995] gap-y-10 gap-x-20">
         <div className="w-full md:w-1/2 md:max-w-full nunito">
-          <div className="p-6 rounded-lg bg-white shadow-xl">
+          <div className="p-6 bg-white shadow-xl">
             <form method="POST" action="https://herotofu.com/start">
               <label className="block mb-6">
                 <span className="text-gray-700">Your name</span>
