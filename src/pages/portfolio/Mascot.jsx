@@ -1,85 +1,44 @@
-import React, { useState } from "react";
-import NumberCount from "../../component/utils/numbercount/NumberCount";
-import Showcase from "../../component/utils/showcase/Showcase";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import Wrapper from "../../component/wrapper";
-import { Link } from "react-router-dom";
 import Portonav from "../../component/utils/portonav/Portonav";
+import { Api } from "../../api";
+import { SkeletonImageList } from "../../component/skeleton/Skeleton";
+
+const NumberCount = lazy(() =>
+  import("../../component/utils/numbercount/NumberCount")
+);
+const Showcase = lazy(() => import("../../component/utils/showcase/Showcase"));
 
 const Mascot = () => {
-  const mascot_design = [
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const imageList = [
     {
-      alt: "",
-      src: require("../../common/assets/mascot/1.webp"),
+      id: 1,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/2-giobrusca.webp"),
+      id: 2,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/3-dougsoptics.webp"),
+      id: 3,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/4-cultcanon.webp"),
+      id: 4,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/5-fantauzzi.webp"),
+      id: 5,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/6-dadatech.webp"),
+      id: 6,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/7-dorian.webp"),
+      id: 7,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/8-dougsoptics2.webp"),
+      id: 8,
     },
     {
-      alt: "",
-      src: require("../../common/assets/mascot/9-DTSmith.webp"),
-    },
-  ];
-  const tee_design = [
-    {
-      alt: "",
-      src: require("../../common/assets/tee/1-KURAMA.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/2-UZUI.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/3-BEZITA.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/4-Luffy.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/5-TRUNK.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/6-ANIMEGIRL.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/7-pikachu.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/8-mummy.jpg"),
-    },
-    {
-      alt: "",
-      src: require("../../common/assets/tee/9-JOKER.jpg"),
+      id: 9,
     },
   ];
   const trackRecord = [
@@ -88,13 +47,24 @@ const Mascot = () => {
     { title: "REFUNDS", number: 12 },
     { title: "%REFUND", number: 2 },
   ];
-  const [activePage, setActivePage] = useState(mascot_design);
-  const [activeTitle, setActiveTitle] = useState("mascot_design");
 
-  const setPage = (item, title) => {
-    setActivePage(item);
-    setActiveTitle(title);
+  const getMascotItems = async () => {
+    try {
+      let res = await Api.get(
+        process.env.REACT_APP_API + "/api/portofolios?populate=mascotDesign"
+      );
+      setItems(res.data.data[0].attributes.mascotDesign.data);
+      console.log(res.data.data[0].attributes.mascotDesign.data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  useEffect(() => {
+    getMascotItems();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Wrapper>
@@ -106,10 +76,18 @@ const Mascot = () => {
           <p className="mx-auto text-center p-4 text-white">
             Developing the art of creating cartoon logos for more than 15 years.
           </p>
-          <Portonav/>
-          <Showcase item={mascot_design} />
+          <Portonav />
+          {loading ? (
+            <SkeletonImageList />
+          ) : (
+            <Suspense fallback={<SkeletonImageList />}>
+              <Showcase item={items} />
+            </Suspense>
+          )}
         </div>
-        <NumberCount trackRecord={trackRecord} />
+        <Suspense fallback={<div>LOADING</div>}>
+          <NumberCount trackRecord={trackRecord} />
+        </Suspense>
       </section>
     </Wrapper>
   );

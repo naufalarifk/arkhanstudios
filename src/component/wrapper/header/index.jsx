@@ -9,6 +9,10 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Menu, Transition } from "@headlessui/react";
+
+
+
+
 function Header() {
   const { pathname } = useLocation();
   const splitLocation = pathname.split("/");
@@ -53,75 +57,75 @@ function Header() {
             </Link>
             {/* Mobile */}
             <div className="lg:hidden block">
-            <Menu>
-              <Menu.Button>
-                <GiHamburgerMenu className="text-white" />
-              </Menu.Button>
-              <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-              <Menu.Items className='flex flex-col px-8 py-2 bg-black text-white font-semibold gap-y-2 border-t border-gray-400 right-0 top-20 absolute '>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link
-                      className={`${active && "bg-blue-500"}`}
-                      to="/mascot-design"
-                    >
-                      Portfolio
-                    </Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link
-                      className={`${active && "bg-blue-500"}`}
-                      to="/blogs"
-                    >
-                      Blog
-                    </Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link
-                      className={`${active && "bg-blue-500"}`}
-                      to="/about"
-                    >
-                      About
-                    </Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link
-                      className={`${active && "bg-blue-500"}`}
-                      to="/contact"
-                    >
-                      Contact
-                    </Link>
-                  )}
-                </Menu.Item>
-                <hr/>
-                <Menu.Item>
-                <div
-              className={`items-center flex lg:order-2 mt-2 gap-3 ${textColor}`}
-            >
-              <BsInstagram />
-              <BsDribbble />
-              <BsBehance />
-              <BsFacebook />
-              <BsYoutube />
-            </div>
-                </Menu.Item>
-              </Menu.Items>
-              </Transition>
-            </Menu>
+              <Menu>
+                <Menu.Button>
+                  <GiHamburgerMenu className="text-white" />
+                </Menu.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="flex flex-col px-8 py-2 bg-black text-white font-semibold gap-y-2 border-t border-gray-400 right-0 top-20 absolute ">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          className={`${active && "bg-blue-500"}`}
+                          to="/mascot-design"
+                        >
+                          Portfolio
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          className={`${active && "bg-blue-500"}`}
+                          to="/blogs"
+                        >
+                          Blog
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          className={`${active && "bg-blue-500"}`}
+                          to="/about"
+                        >
+                          About
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          className={`${active && "bg-blue-500"}`}
+                          to="/contact"
+                        >
+                          Contact
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <hr />
+                    <Menu.Item>
+                      <div
+                        className={`items-center flex lg:order-2 mt-2 gap-3 ${textColor}`}
+                      >
+                        <BsInstagram />
+                        <BsDribbble />
+                        <BsBehance />
+                        <BsFacebook />
+                        <BsYoutube />
+                      </div>
+                    </Menu.Item>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
             </div>
             {/* WEB */}
             <div

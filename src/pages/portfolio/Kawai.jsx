@@ -1,91 +1,68 @@
-import React from 'react'
-import NumberCount from "../../component/utils/numbercount/NumberCount";
-import Showcase from "../../component/utils/showcase/Showcase";
+import React, {lazy, Suspense, useState, useEffect} from 'react'
 import Wrapper from "../../component/wrapper";
 import Portonav from '../../component/utils/portonav/Portonav';
+import { SkeletonImageList } from '../../component/skeleton/Skeleton';
+import { Api } from '../../api';
+
+const NumberCount = lazy(()=> import('../../component/utils/numbercount/NumberCount'))
+const Showcase = lazy(()=> import( "../../component/utils/showcase/Showcase"))
 function Kawai() {
-    const mascot_design = [
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/1.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/2-giobrusca.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/3-dougsoptics.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/4-cultcanon.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/5-fantauzzi.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/6-dadatech.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/7-dorian.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/8-dougsoptics2.webp"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/mascot/9-DTSmith.webp"),
-        },
-      ];
-      const tee_design = [
-        {
-          alt: "",
-          src: require("../../common/assets/tee/1-KURAMA.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/2-UZUI.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/3-BEZITA.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/4-Luffy.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/5-TRUNK.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/6-ANIMEGIRL.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/7-pikachu.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/8-mummy.jpg"),
-        },
-        {
-          alt: "",
-          src: require("../../common/assets/tee/9-JOKER.jpg"),
-        },
-      ];
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const ImageList = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+    {
+      id: 4,
+    },
+    {
+      id: 5,
+    },
+    {
+      id: 6,
+    },
+    {
+      id: 7,
+    },
+    {
+      id: 8,
+    },
+    {
+      id: 9,
+    },
+  ];
+
       const trackRecord = [
         { title: "CUSTOMERS", number: 378 },
         { title: "ORDERS", number: 804 },
         { title: "REFUNDS", number: 12 },
         { title: "%REFUND", number: 2 },
-      ];    
+      ];
+      const getKawaiItems = async () => {
+        try {
+          let res = await Api.get(
+            process.env.REACT_APP_API + "/api/portofolios?populate=chibiDesign"
+          );
+          setItems(res.data.data[0].attributes.chibiDesign.data);
+          console.log(res.data.data[0]);
+          setLoading(false);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      useEffect(() => {
+        getKawaiItems();
+        // eslint-disable-next-line
+      }, []);
+
       return (
         <Wrapper>
           <section className="container flex flex-col h-auto w-[100%] bg-[#512995]">
@@ -97,9 +74,17 @@ function Kawai() {
                 Developing the art of creating cartoon logos for more than 15 years.
               </p>
                 <Portonav/>
-              <Showcase item={tee_design} />
+                {loading ? (
+            <SkeletonImageList />
+          ) : (
+            <Suspense fallback={<SkeletonImageList />}>
+              <Showcase item={items} />
+            </Suspense>
+          )}
             </div>
-            <NumberCount trackRecord={trackRecord}/>
+            <Suspense fallback={<div>LOADING</div>}>
+        <NumberCount trackRecord={trackRecord} />
+        </Suspense>
           </section>
         </Wrapper>
       );
