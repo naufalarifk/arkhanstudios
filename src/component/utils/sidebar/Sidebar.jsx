@@ -7,13 +7,11 @@ function Sidebar() {
 
   return (
     <ul className="space-y-2 mt-12 lg:mt-0">
-    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'about' ? '' : 'invisible'}`} /><Link to='/about'>Why Arkhan Studio</Link></li>
-    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'career' ? '' : 'invisible'}`}/><Link to='/career'>My Freelance Career</Link></li>
-    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'clients' ? '' : 'invisible'}`}/><Link to='/clients'>Happy Clients</Link></li>
-    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'services' ? '' : 'invisible'}`}/><Link to='/services'>Services We Provide</Link></li>
-    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'faq' ? '' : 'invisible'}`}/><Link to='/faq'>FAQ</Link></li>
+    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'about' ? '' : 'invisible'}`} /><Link to='/about'>Who Is Arkhan Studio</Link></li>
+    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'career' ? '' : 'invisible'}`}/><Link to='/career'>Why Arkhan Studio</Link></li>
+    <li className='flex flex-row items-center'><BsDot className={`${splitLocation[1] === 'clients' ? '' : 'invisible'}`}/><Link to='/clients'>Career</Link></li>
   </ul>
   )
 }
 
-export default Sidebar
+export default Sidebar  

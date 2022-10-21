@@ -8,18 +8,44 @@ const Career = () => {
       <section className="container p-0 px-8 lg:p-16 flex flex-col lg:flex-row space-y-8 justify-between bg-[#512995] text-white">
         <Sidebar />
         <section className="w-full lg:w-[70%]">
-          <h1 className="font-bold text-3xl lg:text-4xl">My Freelance Career</h1>
-          <p className="mt-6">
-            It all started in 2008 when joining a creative community that
-            focuses on creating visual businesses in Indonesia. My first task at
-            that time becomes a painter and illustrator assistant. Back in 2012,
-            I join my mentor’s illustration studio to learn the business process
-            in that industry. My position was the main illustrator who work on
-            comics and children book illustration and practice deeper about
-            cartoon and digital painting. Finally in 2015 with the help of my
-            mentor I build Arkhan Studio with the main service in mascot, merch,
-            cartoon, comics, children book illustration.
-          </p>
+          <h1 className="font-bold text-3xl lg:text-4xl">Why Arkhan Studio</h1>
+          <div className="mt-6 space-y-3">
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold">Pro Team</h1>
+              <p>
+                We’re a team of 20+ experienced visual artists who have been
+                working for 7+ years in the industry and building all this
+                chaos. Your project is on the right hand with us
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold">Knowledge</h1>
+              <p>
+                Many illustrators or designers don’t know deeper about the
+                product such as merch, anime, and storybooks. But we have a
+                deeper understanding of what we do, especially creating
+                illustration the sell.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold">Fast and Reliable</h1>
+              <p>
+                We are committed to providing excellent client service with fast
+                delivery and high-quality work by managing our people and
+                timeline.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold">
+                Responsive Communication
+              </h1>
+              <p>
+                Responsive communication is one of the project’s key successes.
+                So, we will directly contact you to match our understanding of
+                the project as well as report the working process regularly.
+              </p>
+            </div>
+          </div>
         </section>
       </section>
     </Wrapper>

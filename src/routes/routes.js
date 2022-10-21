@@ -10,6 +10,7 @@ import Clients from '../pages/about/Clients';
 import Faq from '../pages/about/Faq';
 import Services from '../pages/about/Services';
 import Blog from '../pages/blog/Blog';
+import BlogView from '../pages/blog/BlogView';
 import Contact from '../pages/contact/Contact';
 
 import Home from '../pages/home/Home';
@@ -25,6 +26,7 @@ const Routing = () => {
           <Route exact path='/tee-design' element={<Tee/>}/>
           <Route exact path='/kawai-design' element={<Kawai/>}/>
           <Route exact path='/blogs' element={<Blog/>}/>  
+          <Route exact path='/blog/:id' element={<BlogView/>}/>  
           <Route exact path='/contact' element={<Contact/>}/>  
           <Route exact path='/about' element={<About/>}/>  
           <Route exact path='/career' element={<Career/>}/>  

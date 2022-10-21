@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Wrapper from "../../component/wrapper";
 import { Disclosure, Transition } from "@headlessui/react";
 import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
 import Background from "../../common/assets/jumbotron/jumbotron.png";
 import NumberCount from "../../component/utils/numbercount/NumberCount";
+import { Api } from "../../api";
 const Home = () => {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
   const servicesData = [
     {
       id: 1,
@@ -159,6 +162,25 @@ const Home = () => {
     { title: "REFUNDS", number: 12 },
     { title: "%REFUND", number: 2 },
   ];
+
+  const getHomePortofolio = async () => {
+    try {
+      let res = await Api.get(
+        process.env.REACT_APP_API + "/api/home-portofolios?populate=*"
+      );
+      setItems(res.data.data[0].attributes.homePortofolio.data);
+      console.log(res.data.data[0].attributes.homePortofolio.data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getHomePortofolio();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Wrapper>
       {/* Jumbotron */}
@@ -223,18 +245,9 @@ const Home = () => {
         <p className="text-center nunito">
           Here are some of our masterpieces that clients love it so much!
         </p>
-        <div className="gap-0 grid grid-cols-4">
-          {imageSrc.map((item) => (
-            <div className="flex flex-col">
-              {item.images.map((image) => (
-                <>
-                  <img src={image.src_one} alt="" />
-                  <img src={image.src_two} alt="" />
-                  <img src={image.src_three} alt="" />
-                  <img src={image.src_four} alt="" />
-                </>
-              ))}
-            </div>
+        <div className="gap-0 grid lg:grid-cols-4 grid-cols-2">
+          {items.map((item) => (
+            <img src={item.attributes.url} alt="" />
           ))}
         </div>
         <div className="grid lg:grid-cols-6 grid-cols-2 invisible">
@@ -242,7 +255,7 @@ const Home = () => {
             <img src={item.src} alt="" />
           ))}
         </div>
-        <NumberCount trackRecord={trackRecord}/>
+        <NumberCount trackRecord={trackRecord} />
         <div className="space-y-4 nunito">
           <h1 className="text-center text-2xl mt-20">
             NOT ENOUGH PORTFOLIO SAMPLES?
@@ -259,7 +272,9 @@ const Home = () => {
       <section className="flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
         <img className="w-[300px] h-[300px]" src="images/school-b.png" alt="" />
         <div className="lg:w-[50%] w-full">
-          <h1 className="text-3xl font-bold text-center lg:text-left">ABOUT US</h1>
+          <h1 className="text-3xl font-bold text-center lg:text-left">
+            ABOUT US
+          </h1>
           <p className="lg:text-left text-center">
             We’re illustration studio consist of 10+ passionate and talented
             people working in the illustration industry since 2008 started by
@@ -314,7 +329,7 @@ const Home = () => {
             <img
               className="mx-auto"
               src={require("../../common/assets/faq/professa.png")}
-              alt=''
+              alt=""
             />
             <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
               <p className="font-semibold text-xl">CONTACT ME</p>

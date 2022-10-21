@@ -31,7 +31,7 @@ function Portonav() {
     <Link
       to="/kawai-design"
       className={`mx-auto ${
-        splitLocation[1] === "kawai-chibi"
+        splitLocation[1] === "kawai-design"
           ? "bg-[#5C2E7E] border-[#5C2E7E]"
           : "bg-transparent"
       } bg-transparent text-white p-4 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500`}
