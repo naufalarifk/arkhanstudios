@@ -71,10 +71,10 @@ const Mascot = () => {
       <section className="container flex flex-col h-auto w-[100%] bg-[#512995]">
         <div className="mx-auto mt-12 flex flex-col">
           <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
-            Cartoon Logo Design for Fun Brands
+          See more to our masterpieces
           </p>
           <p className="mx-auto text-center p-4 text-white">
-            Developing the art of creating cartoon logos for more than 15 years.
+          Here are some of our masterpieces that clients love it so much!
           </p>
           <Portonav />
           {loading ? (

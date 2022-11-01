@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Wrapper from "../../component/wrapper";
 import { Disclosure, Transition } from "@headlessui/react";
 import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
-import Background from "../../common/assets/jumbotron/jumbotron.png";
 import NumberCount from "../../component/utils/numbercount/NumberCount";
 import { Api } from "../../api";
+import Man from "../../common/assets/home/Man1.png";
+import GrainBg from "../../common/assets/Rectangle.png";
+import { BsArrowRight } from "react-icons/bs";
 const Home = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -169,7 +171,6 @@ const Home = () => {
         process.env.REACT_APP_API + "/api/home-portofolios?populate=*"
       );
       setItems(res.data.data[0].attributes.homePortofolio.data);
-      console.log(res.data.data[0].attributes.homePortofolio.data);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -183,30 +184,14 @@ const Home = () => {
 
   return (
     <Wrapper>
-      {/* Jumbotron */}
-      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#512995]">
-        <div
-          style={{
-            backgroundImage: `url(${Background})`,
-            backgroundRepeat: "no-repeat",
-          }}
-          className=" lg:w-[100vw] lg:h-[125vh] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh]"
-        >
-          <h1 className="text-[#bdb9a5] font-bold mt-24 text-4xl text-center invisible">
-            Hi, We're Arkhan Studio
-          </h1>
-          <div className="flex flex-row justify-center space-x-10 mt-10 invisible">
-            <button className="hover:bg-[#bdb9a5] text-[#bdb9a5] p-2 bg-transparent hover:text-violet-800 border-[#bdb9a5] border-2 transform transition duration-500">
-              <p className="font-semibold">PORTFOLIO</p>
-            </button>{" "}
-            <button className="hover:bg-[#bdb9a5] text-[#bdb9a5] p-2 bg-transparent hover:text-violet-800 border-[#bdb9a5] border-2 transform transition duration-500">
-              <p className="font-semibold">SERVICES</p>
-            </button>
-          </div>
-        </div>
-      </section>
       {/* Design Services */}
-      <section className="container space-y-4 p-8 bg-[#512995]">
+      <section
+        style={{
+          backgroundImage: `url(${GrainBg})`,
+          backgroundRepeat: "no-repeat",
+        }}
+        className="container space-y-4 p-8 bg-[#512995]"
+      >
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           DESIGN SERVICES I PROVIDE
         </p>
@@ -237,12 +222,11 @@ const Home = () => {
         </div>
       </section>
       {/* Graphic Design Projects */}
-      <section className="bg-[#512995] container space-y-4 p-8 relative flex flex-col text-white">
-        {" "}
-        <p className="mx-auto text-center p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
-          PORTFOLIO
+      <section className="bg-[#512995] container p-8 relative flex flex-col text-white">
+        <p className="mx-auto text-center my-2 p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
+          See Some of Our Masterpieces
         </p>
-        <p className="text-center nunito">
+        <p className="text-center nunito text-gray-300 my-6">
           Here are some of our masterpieces that clients love it so much!
         </p>
         <div className="gap-0 grid lg:grid-cols-4 grid-cols-2">
@@ -250,30 +234,24 @@ const Home = () => {
             <img src={item.attributes.url} alt="" />
           ))}
         </div>
-        <div className="grid lg:grid-cols-6 grid-cols-2 invisible">
-          {logoSrc.map((item) => (
-            <img src={item.src} alt="" />
-          ))}
-        </div>
-        <NumberCount trackRecord={trackRecord} />
         <div className="space-y-4 nunito">
           <h1 className="text-center text-2xl mt-20">
             NOT ENOUGH PORTFOLIO SAMPLES?
           </h1>
           <p className="text-center text-lg">
-            Enjoy some case studios, rationalisation behind my choices or work
-            in progress images.
+            Enjoy some of cas studies, the logic behind the art we produce
           </p>
         </div>
-        <button className="mx-auto rounded-lg bg-black text-white p-2 hover:bg-transparent hover:text-white border-black border-2 transform transition duration-500">
+        <button className="mx-auto bg-[#7f56d9] text-white p-2 my-10">
           <p className="font-semibold">VISIT MY PORTOFOLIO</p>
         </button>
+        <NumberCount trackRecord={trackRecord} />
       </section>
       <section className="flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
-        <img className="w-[300px] h-[300px]" src="images/school-b.png" alt="" />
-        <div className="lg:w-[50%] w-full">
-          <h1 className="text-3xl font-bold text-center lg:text-left">
-            ABOUT US
+        <img className="w-[300px] h-[300px]" src={Man} alt="" />
+        <div className="lg:w-[50%] space-y-8 w-full">
+          <h1 className="text-3xl font-bold text-center w-1/2 lg:text-left">
+            Get To Know More About Us
           </h1>
           <p className="lg:text-left text-center">
             We’re illustration studio consist of 10+ passionate and talented
@@ -283,13 +261,17 @@ const Home = () => {
             good business. We also help my fellow illustrator and designer
             through my blog and social media.
           </p>
+          <button className="flex flex-row items-center space-x-2">
+          <p>Know More</p> <BsArrowRight />
+          </button>
         </div>
       </section>
       {/* FAQ */}
-      <section className="container space-y-10 p-8 bg-[#512995]">
+      <section className="container p-8 bg-[#512995]">
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           FREQUENTLY ASKED QUESTIONS
         </p>
+        <p className="text-center mb-16 text-gray-300">Everything you need to know about the service and products.</p>
         {/* disclosure */}
         <div className="flex lg:flex-row-reverse flex-col-reverse mt-11 gap-y-10 justify-evenly">
           <section className="w-full lg:px-4 lg:w-[37rem] space-y-4 nunito">
@@ -297,14 +279,15 @@ const Home = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white shadow-md px-4 py-2 text-left text-base lg:text-lg font-semibold focus:outline-none">
-                      <span className="lg:w-3/4 w-4/5">{item.title}</span>
+                    <Disclosure.Button className="flex w-full justify-between bg-transparent px-4 py-2 text-left text-base lg:text-lg font-semibold focus:outline-none">
+                      <span className="lg:w-3/4 text-white w-4/5">{item.title}</span>
                       <AiFillCaretDown
                         className={`${
                           open ? "rotate-180 transform" : ""
                         } h-4 w-4 text-white`}
                       />
                     </Disclosure.Button>
+                    <hr className=""/>
                     <Transition
                       enter="transition duration-100 ease-out"
                       enterFrom="transform scale-95 opacity-0"
@@ -313,7 +296,7 @@ const Home = () => {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500 leading-loose bg-white shadow-md rounded-lg">
+                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-300 leading-loose bg-transparent">
                         {item.content}
                       </Disclosure.Panel>
                     </Transition>
@@ -322,22 +305,9 @@ const Home = () => {
               </Disclosure>
             ))}
           </section>
-          <div className="flex flex-col space-y-6">
-            <h1 className="text-2xl text-center font-bold text-white nunito">
-              If you have any questions please contact me
-            </h1>
-            <img
-              className="mx-auto"
-              src={require("../../common/assets/faq/professa.png")}
-              alt=""
-            />
-            <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
-              <p className="font-semibold text-xl">CONTACT ME</p>
-            </button>
-          </div>
         </div>
       </section>
-      <div className="w-full md:w-96 md:max-w-full nunito hidden">
+      <section className="w-full md:w-96 md:max-w-full nunito hidden">
         <div className="p-6 rounded-lg bg-white shadow-xl">
           <form method="POST" action="https://herotofu.com/start">
             <label className="block mb-6">
@@ -411,7 +381,7 @@ const Home = () => {
             </div>
           </form>
         </div>
-      </div>
+      </section>
     </Wrapper>
   );
 };
