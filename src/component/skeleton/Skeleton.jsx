@@ -122,7 +122,7 @@ const SkeletonBlogView = (props) => (
 const SkeletonBlogList = (props) => (
   <>
     {/* web */}
-    <div className="mx-auto lg:grid grid-cols-2 hidden">
+    <div className="mx-auto lg:grid grid-cols-3 hidden">
       <ContentLoader
         width={450}
         height={400}
@@ -171,6 +171,18 @@ const SkeletonBlogList = (props) => (
         <rect x="44" y="333" rx="3" ry="3" width="119" height="24" />
         <rect x="42" y="77" rx="10" ry="10" width="315" height="217" />
       </ContentLoader>{" "}
+      <ContentLoader
+        width={450}
+        height={400}
+        viewBox="0 0 450 400"
+        backgroundColor="#f0f0f0"
+        foregroundColor="#dedede"
+        {...props}
+      >
+        <rect x="43" y="304" rx="4" ry="4" width="271" height="24" />
+        <rect x="44" y="333" rx="3" ry="3" width="119" height="24" />
+        <rect x="42" y="77" rx="10" ry="10" width="315" height="217" />
+      </ContentLoader>
       <ContentLoader
         width={450}
         height={400}

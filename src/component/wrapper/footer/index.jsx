@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="max-w-7xl space-y-6 bg-[#512995] text-white">
+    <footer className="max-w-7xl space-y-6 bg-[#512995] text-white pt-20">
     <section className="flex flex-row justify-between w-4/5 mx-auto">
       <h1 className="font-bold text-2xl">Contact Us to Start <br/> Visualize Your Idea</h1>
       <form className="flex flex-row space-x-2 my-2">

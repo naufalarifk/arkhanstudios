@@ -16,7 +16,7 @@ function Header() {
   const splitLocation = pathname.split("/");
   const [navSize, setnavSize] = useState("5rem");
   const [navColor, setnavColor] = useState(window.scrollY > 10 ? "black" : "transparent");
-  const [webLogo, setWebLogo] = useState("/images/logo2-dark.png");
+  const [webLogo, setWebLogo] = useState("/images/arkhan-white.png");
   const [textColor, setTextColor] = useState("text-white");
   const [hoverTextColor, setHoverTextColor] = useState("black");
   const listenScrollEvent = () => {
@@ -31,8 +31,8 @@ function Header() {
       ? setTextColor("text-white")
       : setTextColor("text-white");
     window.scrollY > 10
-      ? setWebLogo("/images/logo-mobile-01.png")
-      : setWebLogo("/images/logo2-dark.png");
+      ? setWebLogo("/images/arkhan-white.png")
+      : setWebLogo("/images/arkhan-white.png");
   };
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -50,7 +50,7 @@ function Header() {
                 height: navSize,
                 transition: "all 1s",
               }}
-              className="px-4 lg:px-6"
+              className="px-4 lg:pr-32 lg:pl-24"
             >
               <div className="flex flex-wrap justify-between md:px-12 lg:px-0 lg:justify-between items-center mx-auto max-w-screen-xl">
                 <Link to="/" className="flex items-center">

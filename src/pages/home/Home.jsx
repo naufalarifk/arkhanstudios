@@ -5,6 +5,11 @@ import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
 import NumberCount from "../../component/utils/numbercount/NumberCount";
 import { Api } from "../../api";
 import Man from "../../common/assets/home/Man1.png";
+import Catalog from "../../common/assets/home/catalog.png";
+import Circooles from "../../common/assets/home/circooles.png";
+import Layers from "../../common/assets/home/layers.png";
+import Quotient from "../../common/assets/home/quotient.png";
+import Sisyphus from "../../common/assets/home/sisyphus.png";
 import GrainBg from "../../common/assets/Rectangle.png";
 import { BsArrowRight } from "react-icons/bs";
 const Home = () => {
@@ -132,32 +137,6 @@ const Home = () => {
     },
   ];
 
-  const logoSrc = [
-    {
-      id: 1,
-      src: require("../../common/assets/projects/hasbro-logo.png"),
-    },
-    {
-      id: 2,
-      src: require("../../common/assets/projects/nestle-logo.png"),
-    },
-    {
-      id: 3,
-      src: require("../../common/assets/projects/salesforce-logo.png"),
-    },
-    {
-      id: 4,
-      src: require("../../common/assets/projects/toyota-logo.png"),
-    },
-    {
-      id: 5,
-      src: require("../../common/assets/projects/mccormick-logo.png"),
-    },
-    {
-      id: 6,
-      src: require("../../common/assets/projects/maersk-logo.png"),
-    },
-  ];
   const trackRecord = [
     { title: "CUSTOMERS", number: 378 },
     { title: "ORDERS", number: 804 },
@@ -190,7 +169,7 @@ const Home = () => {
           backgroundImage: `url(${GrainBg})`,
           backgroundRepeat: "no-repeat",
         }}
-        className="container space-y-4 p-8 bg-[#512995]"
+        className="container space-y-4 py-8 px-24 bg-[#512995]"
       >
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           DESIGN SERVICES I PROVIDE
@@ -229,7 +208,7 @@ const Home = () => {
         <p className="text-center nunito text-gray-300 my-6">
           Here are some of our masterpieces that clients love it so much!
         </p>
-        <div className="gap-0 grid lg:grid-cols-4 grid-cols-2">
+        <div className="gap-0 grid lg:grid-cols-4 grid-cols-2 px-24">
           {items.map((item) => (
             <img src={item.attributes.url} alt="" />
           ))}
@@ -254,7 +233,7 @@ const Home = () => {
             Get To Know More About Us
           </h1>
           <p className="lg:text-left text-center">
-            We’re illustration studio consist of 10+ passionate and talented
+            We&apos;re illustration studio consist of 10+ passionate and talented
             people working in the illustration industry since 2008 started by
             Kudjo, our band leader. We help small and big companies to achieve
             their goal using visuals. We believe that nowadays good visual is
@@ -266,6 +245,32 @@ const Home = () => {
           </button>
         </div>
       </section>
+      <section className="max-w-7xl flex items-center flex-col space-y-4 bg-[#512995] text-white">
+          <h1 className="text-3xl w-1/2 text-center font-semibold">Working in the new era need a partner that not only have an experience but added value.</h1>
+          
+          <div className="grid grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="font-bold text-lg justify-evenly flex row gap-2">
+              <img alt='' src={Layers} className='h-[32px] w-[32px]' />
+              Layers
+            </div>
+            <div className="font-bold text-lg justify-evenly flex row gap-2">
+              <img alt='' src={Sisyphus} className='h-[32px] w-[32px]' />
+              Sisyphus
+            </div>{" "}
+            <div className="font-bold text-lg justify-evenly flex row gap-2">
+              <img alt='' src={Circooles} className='h-[32px] w-[32px]' />
+              Circooles
+            </div>{" "}
+            <div className="font-bold text-lg justify-evenly flex row gap-2">
+              <img alt='' src={Catalog} className='h-[32px] w-[32px]' />
+              Catalog
+            </div>{" "}
+            <div className="font-bold text-lg justify-evenly flex row gap-2">
+              <img alt='' src={Quotient} className='h-[32px] w-[32px]' />
+              Quotient
+            </div>
+          </div>
+        </section>
       {/* FAQ */}
       <section className="container p-8 bg-[#512995]">
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">

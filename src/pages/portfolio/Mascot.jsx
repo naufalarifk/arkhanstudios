@@ -3,6 +3,7 @@ import Wrapper from "../../component/wrapper";
 import Portonav from "../../component/utils/portonav/Portonav";
 import { Api } from "../../api";
 import { SkeletonImageList } from "../../component/skeleton/Skeleton";
+import Services from "../../component/utils/services/Services";
 
 const NumberCount = lazy(() =>
   import("../../component/utils/numbercount/NumberCount")
@@ -12,35 +13,6 @@ const Showcase = lazy(() => import("../../component/utils/showcase/Showcase"));
 const Mascot = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const imageList = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    },
-    {
-      id: 8,
-    },
-    {
-      id: 9,
-    },
-  ];
   const trackRecord = [
     { title: "CUSTOMERS", number: 378 },
     { title: "ORDERS", number: 804 },
@@ -89,6 +61,7 @@ const Mascot = () => {
           <NumberCount trackRecord={trackRecord} />
         </Suspense>
       </section>
+      <Services/>
     </Wrapper>
   );
 };

@@ -16,6 +16,8 @@ import Contact from '../pages/contact/Contact';
 import Home from '../pages/home/Home';
 import Kawai from '../pages/portfolio/Kawai';
 import Mascot from '../pages/portfolio/Mascot';
+import Others from '../pages/portfolio/Others';
+import Storybook from '../pages/portfolio/Storybook';
 import Tee from '../pages/portfolio/Tee';
 const Routing = () => {
   return (
@@ -33,6 +35,8 @@ const Routing = () => {
           <Route exact path='/clients' element={<Clients/>}/>
           <Route exact path='/faq' element={<Faq/>}/>  
           <Route exact path='/services' element={<Services/>}/>  
+          <Route exact path='/storybook' element={<Storybook/>}/>  
+          <Route exact path='/other-design' element={<Others/>}/>  
         </Routes>
     </Router>
   )
