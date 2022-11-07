@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="max-w-7xl space-y-6 bg-[#512995] text-white pt-20">
-    <section className="flex flex-row justify-between w-4/5 mx-auto">
+    <section className="flex flex-col lg:flex-row justify-between w-4/5 mx-auto">
       <h1 className="font-bold text-2xl">Contact Us to Start <br/> Visualize Your Idea</h1>
       <form className="flex flex-row space-x-2 my-2">
           <input type='text' placeholder="enter your email here" className="border-2 border-[#7f56d9] focus:border-[#7f56d9] px-2 py-1 input-middle" />

@@ -19,7 +19,7 @@ function Wrapper({ children }) {
           className="lg:w-[100vw] lg:h-[900px] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh] flex flex-col px-8 md:px-32"
         >
           {splitLocation[1] === "" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-24 md:mt-12 lg:mt-24 text-lg md:text-7xl">
               We Are
               <br /> Arkhan
               <br /> Studio
