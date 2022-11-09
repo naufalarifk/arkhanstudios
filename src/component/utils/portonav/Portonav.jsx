@@ -11,8 +11,8 @@ function Portonav() {
         className={`mx-auto ${
           splitLocation[1] === "mascot-design"
             ? "bg-[#7F56D9] border-[#7F56D9] text-white"
-            : "text-[#7F56D9] bg-transparent"
-        } p-4 bg-white border-[#7F56D9] border-2 transform transition duration-500`}
+            : "text-[#7F56D9] bg-white"
+        } p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
         <p className="font-semibold text-lg text-center">MASCOT DESIGN</p>
       </Link>
@@ -21,8 +21,8 @@ function Portonav() {
         className={`mx-auto ${
           splitLocation[1] === "tee-design"
             ? "bg-[#7F56D9] border-[#7F56D9] text-white"
-            : "bg-transparent text-[#7F56D9]"
-        } bg-transparent  p-4 bg-white border-[#7F56D9] border-2 transform transition duration-500`}
+            : "bg-white text-[#7F56D9]"
+        } bg-transparent  p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
         <p className="font-semibold text-lg text-center">T-SHIRT DESIGN</p>
       </Link>
@@ -31,8 +31,8 @@ function Portonav() {
         className={`mx-auto ${
           splitLocation[1] === "storybook"
             ? "bg-[#7F56D9] border-[#7F56D9] text-white"
-            : "text-[#7F56D9] bg-transparent"
-        } bg-transparent p-4 bg-white border-[#7F56D9] border-2 transform transition duration-500`}
+            : "text-[#7F56D9] bg-white"
+        } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
         <p className="font-semibold text-lg text-center">STORYBOOK</p>
       </Link>{" "}
@@ -41,8 +41,8 @@ function Portonav() {
         className={`mx-auto ${
           splitLocation[1] === "kawai-design"
             ? "bg-[#7F56D9] border-[#7F56D9] text-white"
-            : "text-[#7F56D9] bg-transparent"
-        } bg-transparent p-4 bg-white border-[#7F56D9] border-2 transform transition duration-500`}
+            : "text-[#7F56D9] bg-white"
+        } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
         <p className="font-semibold text-lg text-center">KAWAII CHIBI</p>
       </Link>{" "}
@@ -51,8 +51,8 @@ function Portonav() {
         className={`mx-auto ${
           splitLocation[1] === "other-design"
             ? "bg-[#7F56D9] border-[#7F56D9] text-white"
-            : "text-[#7F56D9] bg-transparent"
-        } bg-transparent p-4 bg-white border-[#7F56D9] border-2 transform transition duration-500`}
+            : "text-[#7F56D9] bg-white"
+        } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
         <p className="font-semibold text-lg text-center">OTHERS</p>
       </Link>

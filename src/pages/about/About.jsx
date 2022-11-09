@@ -30,8 +30,8 @@ const About = () => {
   ];
   return (
     <Wrapper>
-      <section className="container p-0 px-8 lg:p-16 flex flex-col space-y-8 justify-between bg-[#512995] text-white">
-      <div className="flex flex-row-reverse items-center justify-evenly">
+      <section className="p-0 px-8 lg:p-16 flex flex-col space-y-8 justify-between bg-[#512995] text-white">
+      <div className="flex flex-row-reverse items-center justify-between">
         <div className="space-y-4 w-1/2 text-white">
           <h1 className="font-bold text-4xl">Who is Arkhan Studio?</h1>
           <p className="">
@@ -43,9 +43,9 @@ const About = () => {
         </div>
         <img className="w-[362px]" src={Man} alt="" />
       </div>
-      <div className="grid grid-cols-2 gap-4 nunito text-white">
+      <div className="grid grid-cols-2 gap-1 nunito text-white">
         {servicesData.map((item) => (
-          <div className={`px-4 pb-4 space-y-6 flex flex-row items-center`}>
+          <div className={`px-2 pb-4 space-y-6 flex flex-row items-center`}>
             <img
               className="lg:h-[200px] lg:w-[200px] h-[100px] w-[100px]"
               style={{
@@ -61,7 +61,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row items-center justify-evenly">
+      <div className="flex flex-row items-center justify-between">
         <div className="space-y-4 w-1/2 text-white">
           <h1 className="font-bold text-4xl">How It All Started</h1>
           <p className="">

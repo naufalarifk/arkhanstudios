@@ -27,7 +27,7 @@ const Blog = () => {
   }, []);
   return (
     <Wrapper>
-      <section className="container p-2 lg:p-16 flex flex-col justify-between bg-[#512995] text-white">
+      <section className="p-2 lg:p-16 flex flex-col justify-between bg-[#512995] text-white">
         <div className="flex flex-col">
           <h1 className="text-center font-bold text-4xl">
             We Share Our Skill Here

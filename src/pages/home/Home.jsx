@@ -5,6 +5,7 @@ import { AiFillCaretDown, AiOutlinePlus } from "react-icons/ai";
 import NumberCount from "../../component/utils/numbercount/NumberCount";
 import { Api } from "../../api";
 import Man from "../../common/assets/home/Man1.png";
+import Avatar from "../../common/assets/home/Avatar.png"
 import Catalog from "../../common/assets/home/catalog.png";
 import Circooles from "../../common/assets/home/circooles.png";
 import Layers from "../../common/assets/home/layers.png";
@@ -165,14 +166,10 @@ const Home = () => {
     <Wrapper>
       {/* Design Services */}
       <section
-        style={{
-          backgroundImage: `url(${GrainBg})`,
-          backgroundRepeat: "no-repeat",
-        }}
-        className="container space-y-4 py-8 px-24 bg-[#512995]"
+        className="  space-y-4 py-8 px-24 bg-[#512995]"
       >
-        <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
-          DESIGN SERVICES I PROVIDE
+        <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-5xl font-bold rounded-lg inter">
+          Design Services I Provide
         </p>
         <p className="text-center nunito text-white">
           A selection of my preferred projects I have created during the last 15
@@ -192,7 +189,7 @@ const Home = () => {
               <div className="space-y-2 flex flex-col nunito">
                 <h1 className="font-bold text-base text-center">{item.name}</h1>
                 <p className="text-sm text-center">{item.desc}</p>
-                <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-black hover:border-[#5C2E7E] border-2 transform transition duration-500">
+                <button className="mx-auto bg-transparent text-white p-2 hover:bg-transparent hover:bg-[#5C2E7E] hover:text-white border-white hover:border-[#5C2E7E] border-2 transform transition duration-500">
                   <p className="font-semibold text-xs">MORE</p>
                 </button>
               </div>
@@ -201,7 +198,7 @@ const Home = () => {
         </div>
       </section>
       {/* Graphic Design Projects */}
-      <section className="bg-[#512995] container p-8 relative flex flex-col text-white">
+      <section className="bg-[#512995]   p-8 relative flex flex-col text-white">
         <p className="mx-auto text-center my-2 p-4 text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           See Some of Our Masterpieces
         </p>
@@ -214,8 +211,8 @@ const Home = () => {
           ))}
         </div>
         <div className="space-y-4 nunito">
-          <h1 className="text-center text-2xl mt-20">
-            NOT ENOUGH PORTFOLIO SAMPLES?
+          <h1 className="font-bold text-center text-4xl mt-20">
+            Not Enough Portfolio Samples?
           </h1>
           <p className="text-center text-lg">
             Enjoy some of cas studies, the logic behind the art we produce
@@ -226,7 +223,7 @@ const Home = () => {
         </button>
         <NumberCount trackRecord={trackRecord} />
       </section>
-      <section className="flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
+      <section className="  flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
         <img className="w-[300px] h-[300px]" src={Man} alt="" />
         <div className="lg:w-[50%] space-y-8 w-full">
           <h1 className="text-3xl font-bold text-center w-1/2 lg:text-left">
@@ -245,9 +242,11 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <section className="max-w-7xl flex items-center flex-col space-y-4 bg-[#512995] text-white">
-          <h1 className="text-3xl w-1/2 text-center font-semibold">Working in the new era need a partner that not only have an experience but added value.</h1>
-          
+      <section className="  flex items-center flex-col space-y-4 bg-[#512995] text-white">
+          <h1 className="text-3xl w-3/4 text-center font-semibold">Working in the new era need a partner that <br/> not only have an experience but added value.</h1>
+          <img src={Avatar} alt='' className="h-[144px] w-[144px]"/>
+          <h1 className="text-white font-bold text-2xl">Doni Kudjo</h1>
+          <p>CEO of Arkan Studio</p>
           <div className="grid grid-cols-3 lg:grid-cols-5 gap-4">
             <div className="font-bold text-lg justify-evenly flex row gap-2">
               <img alt='' src={Layers} className='h-[32px] w-[32px]' />
@@ -272,14 +271,14 @@ const Home = () => {
           </div>
         </section>
       {/* FAQ */}
-      <section className="container p-8 bg-[#512995]">
+      <section className="  p-8 bg-[#512995]">
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           FREQUENTLY ASKED QUESTIONS
         </p>
         <p className="text-center mb-16 text-gray-300">Everything you need to know about the service and products.</p>
         {/* disclosure */}
         <div className="flex lg:flex-row-reverse flex-col-reverse mt-11 gap-y-10 justify-evenly">
-          <section className="w-full lg:px-4 lg:w-[37rem] space-y-4 nunito">
+          <section className="w-full lg:px-4 lg:w-10/12 space-y-4 nunito">
             {faqList.map((item) => (
               <Disclosure>
                 {({ open }) => (

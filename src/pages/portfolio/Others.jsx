@@ -40,7 +40,7 @@ const Others = () => {
 
   return (
     <Wrapper>
-      <section className="container flex flex-col h-auto w-[100%] bg-[#512995]">
+      <section className="flex flex-col h-auto w-[100%] bg-[#512995]">
         <div className="mx-auto mt-12 flex flex-col">
           <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
           See more to our masterpieces storye

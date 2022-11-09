@@ -9,7 +9,7 @@ function Wrapper({ children }) {
   return (
     <>
       <Header />
-      <section className="container flex lg:flex-row flex-col h-auto w-[100%] bg-[#512995]">
+      <section className="flex lg:flex-row flex-col h-auto w-[100%] bg-[#512995]">
         <div
           style={{
             backgroundImage: `url(${Background})`,
@@ -19,7 +19,7 @@ function Wrapper({ children }) {
           className="lg:w-[100vw] lg:h-[900px] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh] flex flex-col px-8 md:px-32"
         >
           {splitLocation[1] === "" ? (
-            <h1 className="text-white font-bold mt-24 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-24 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
               We Are
               <br /> Arkhan
               <br /> Studio
@@ -29,20 +29,20 @@ function Wrapper({ children }) {
             splitLocation[1] === "kawai-design" ||
             splitLocation[1] === "other-design" ||
             splitLocation[1] === "storybook" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
               We Believe Good <br /> Visual is A Good <br /> Business
             </h1>
           ) : splitLocation[1] === "blogs" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
               Stay Updated! <br /> We Share <br /> Something Nice <br /> About
               Art!
             </h1>
           ) : splitLocation[1] === "about" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
               Get to know <br /> More About <br /> Arkhan Studio
             </h1>
           ) : splitLocation[1] === `contact` ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-24 text-lg md:text-7xl">
+            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
               Let&apos;s Share and <br /> Discuss About <br /> Your Idea{" "}
             </h1>
           ) : null}
