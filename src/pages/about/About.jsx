@@ -33,9 +33,9 @@ const About = () => {
       <section className="p-0 px-8 lg:p-16 flex flex-col space-y-8 justify-between bg-[#512995] text-white">
       <div className="flex flex-row-reverse items-center justify-between">
         <div className="space-y-4 w-1/2 text-white">
-          <h1 className="font-bold text-4xl">Who is Arkhan Studio?</h1>
+          <h1 className="font-extrabold text-4xl">Who is Arkhan Studio?</h1>
           <p className="">
-          We’re illustration studio consist of 10+ passionate and talented people working in the illustration industry since 2008 started by Kudjo, our band leader. We help small and big companies to achieve their goal using visuals. We believe that nowadays good visual is good business. We also help my fellow illustrator and designer through my blog and social media.
+          We&apos;re illustration studio consist of 10+ passionate and talented people working in the illustration industry since 2008 started by Kudjo, our band leader. We help small and big companies to achieve their goal using visuals. We believe that nowadays good visual is good business. We also help my fellow illustrator and designer through my blog and social media.
           </p>
           <button className="bg-[#7F56D9] text-white px-4 py-2">
             BOOK A SERVICE
@@ -43,7 +43,7 @@ const About = () => {
         </div>
         <img className="w-[362px]" src={Man} alt="" />
       </div>
-      <div className="grid grid-cols-2 gap-1 nunito text-white">
+      <div className="grid grid-cols-2 gap-1 nunito text-white px-8">
         {servicesData.map((item) => (
           <div className={`px-2 pb-4 space-y-6 flex flex-row items-center`}>
             <img
@@ -61,9 +61,9 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-row items-center justify-evenly">
         <div className="space-y-4 w-1/2 text-white">
-          <h1 className="font-bold text-4xl">How It All Started</h1>
+          <h1 className="font-extrabold text-4xl">How It All Started</h1>
           <p className="">
           It all started in 2008 when joining a creative community that focuses on creating visual businesses in Indonesia. My first task at that time becomes a painter and illustrator assistant. Back in 2012, I join my mento&apos;’s illustration studio to learn the business process in that industry. My position was the main illustrator who work on comics and children&apos;s book illustrations and practice deeper about cartoons and digital painting. Finally in 2015 with the help of my mentor, I build Arkhan Studio with the main service in mascots, merch, cartoons, comics, and children&apos;s book illustrations.
           </p>

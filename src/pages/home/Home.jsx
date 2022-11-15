@@ -205,7 +205,7 @@ const Home = () => {
         <p className="text-center nunito text-gray-300 my-6">
           Here are some of our masterpieces that clients love it so much!
         </p>
-        <div className="gap-0 grid lg:grid-cols-4 grid-cols-2 px-24">
+        <div className="grid lg:grid-cols-4 gap-6 grid-cols-2 px-24">
           {items.map((item) => (
             <img src={item.attributes.url} alt="" />
           ))}

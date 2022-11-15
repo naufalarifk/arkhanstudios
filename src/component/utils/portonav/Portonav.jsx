@@ -14,7 +14,7 @@ function Portonav() {
             : "text-[#7F56D9] bg-white"
         } p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
-        <p className="font-semibold text-lg text-center">MASCOT DESIGN</p>
+        <p className="font-semibold text-base text-center">MASCOT DESIGN</p>
       </Link>
       <Link
         to="/tee-design"
@@ -24,7 +24,7 @@ function Portonav() {
             : "bg-white text-[#7F56D9]"
         } bg-transparent  p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
-        <p className="font-semibold text-lg text-center">T-SHIRT DESIGN</p>
+        <p className="font-semibold text-base text-center">T-SHIRT DESIGN</p>
       </Link>
       <Link
         to="/storybook"
@@ -34,7 +34,7 @@ function Portonav() {
             : "text-[#7F56D9] bg-white"
         } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
-        <p className="font-semibold text-lg text-center">STORYBOOK</p>
+        <p className="font-semibold text-base text-center">STORYBOOK</p>
       </Link>{" "}
       <Link
         to="/kawai-design"
@@ -44,7 +44,7 @@ function Portonav() {
             : "text-[#7F56D9] bg-white"
         } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
-        <p className="font-semibold text-lg text-center">KAWAII CHIBI</p>
+        <p className="font-semibold text-base text-center">KAWAII CHIBI</p>
       </Link>{" "}
       <Link
         to="/other-design"
@@ -54,7 +54,7 @@ function Portonav() {
             : "text-[#7F56D9] bg-white"
         } bg-transparent p-4 border-[#7F56D9] border-2 transform transition duration-500`}
       >
-        <p className="font-semibold text-lg text-center">OTHERS</p>
+        <p className="font-semibold text-base text-center">OTHERS</p>
       </Link>
     </div>
   );

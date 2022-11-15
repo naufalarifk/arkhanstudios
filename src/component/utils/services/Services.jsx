@@ -85,40 +85,49 @@ function Services() {
           We deliver the quality, we know your time is limited. Let&apos;s talk
           about the idea and our team will do the rest
         </p>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-5 gap-6">
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
               <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[184px] h-[18px]" />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
             </div>
-            <p className='w-4/5'>
+            <p className="w-4/5">
               You send 50% down payment & we work in the brief of the project.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
               <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[184px] h-[18px]" />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
             </div>
-            <p className='w-4/5'>
-            I provide sketches based on the brief of the project.
+            <p className="w-4/5">
+              I provide sketches based on the brief of the project.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
               <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[184px] h-[18px]" />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
             </div>
-            <p className='w-4/5'>
-            You review the sketches and I make all corrections needed.
+            <p className="w-4/5">
+              You review the sketches and I make all corrections needed.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
               <BiCheckCircle className="text-white" size={22} />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
             </div>
-            <p className='w-4/5'>
+            <p className="w-4/5">
             You approve the sketch and I create the final design.
+            </p>
+          </div>{" "}
+          <div className="">
+            <div className="flex flex-row justify-between space-x-4 items-center">
+              <BiCheckCircle className="text-white" size={22} />
+            </div>
+            <p className="w-4/5">
+              You approve the sketch and I create the final design.
             </p>
           </div>
         </div>

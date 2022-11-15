@@ -59,9 +59,9 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <section className="p-8 lg:p-16 bg-[#512995] space-y-10">
+      <section className="p-8 lg:p-24 bg-[#512995] space-y-10">
         <h1 className="text-white font-bold text-4xl text-center">
-          Let’s level up your Idea, together
+          Let&apos;s level up your Idea, together
         </h1>
         <div className="flex flex-col lg:flex-row justify-between gap-y-10 gap-x-20">
           <div className="w-full md:w-1/2 md:max-w-full nunito">
