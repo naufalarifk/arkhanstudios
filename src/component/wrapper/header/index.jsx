@@ -50,9 +50,9 @@ function Header() {
           }}
           className="px-4 lg:pr-32 lg:pl-24"
         >
-          <div className="flex flex-wrap justify-between md:px-12 lg:px-0 lg:justify-between items-center mx-auto max-w-screen-xl">
+          <div className="flex flex-wrap justify-between py-4 lg:py-0 md:px-12 lg:px-0 lg:justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/" className="flex items-center">
-              <img src={webLogo} className="mr-3 h-20" alt="SosFactory Logo" />
+              <img src={webLogo} className="mr-3 h-12 lg:h-20" alt="arkhan Logo" />
             </Link>
             {/* Mobile */}
             <div className="lg:hidden block md:block">

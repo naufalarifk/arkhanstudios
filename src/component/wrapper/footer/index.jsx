@@ -13,7 +13,7 @@ const Footer = () => {
       <h1 className="font-bold text-2xl">Contact Us to Start <br/> Visualize Your Idea</h1>
       <form className="flex flex-row my-2 space-x-2 w-full lg:w-3/5 justify-between">
           <input type='text' placeholder="enter your email here" className="border-2 border-[#7f56d9] focus:border-[#7f56d9] px-2 py-1 input-middle lg:w-full" />
-          <button className="bg-[#7f56d9] text-xs px-1 lg:px-3 py-1 text-white lg:w-1/5">Contact Us</button>
+          <button className="bg-[#7f56d9] text-xs px-2 lg:px-3 py-1 text-white lg:w-1/5">Contact Us</button>
       </form>
     </section>
     <hr className="w-4/5 mx-auto"/>
@@ -31,7 +31,7 @@ const Footer = () => {
               <BsYoutube />
             </div>
   </div>
-  <div className="flex flex-row justify-evenly w-full lg:w-1/2">
+  <div className="flex flex-row justify-start space-x-20 lg:space-x-0 lg:justify-evenly w-full lg:w-1/2">
   <ul className='space-y-2'>
       <p className="font-bold">Company</p>
       <li>About</li>
