@@ -44,7 +44,7 @@ const Home = () => {
   ];
   const faqList = [
     {
-      title: "HOW MANY REVISIONS DO YOU OFFER IN YOUR DESIGN PROCESS?",
+      title: "How many revisions do you offer in your design process?",
       content: `I offer a premium custom design service and I guarantee full satisfaction. Revisions will be the necessary in order to achieve the objective set.
     
                 My design process is sequential so we’ll do the work in stages – briefing, conceptualisation, sketch and final design – and we’ll make all the revisions you need (within reason) but when one stage is approved we can’t turn back again. If it happens I may charge a fee.
@@ -52,11 +52,11 @@ const Home = () => {
                 `,
     },
     {
-      title: "WILL YOU REFUND MY MONEY IF I DON'T LIKE YOUR WORK?",
+      title: "Will you refund my money if i don't like your work?",
       content: `If I can’t deliver perfection then I will charge just for the work you approved so until you approve the preliminary sketch, you are elegible for a full refund.`,
     },
     {
-      title: "WHO OWNS THE COPYRIGHT OF MY DESIGNS?",
+      title: "Who owns the copyright of my designs?",
       content: `Copyright of the final work is yours upon receipt of final payment. By default I reserve the right to claim the authorship of the artwork, meaning that once the designs are public I can list it in my social networks and portfolio.
     
           Any unapproved sketch created during your order, that of course is different enough to the final design, belongs to me.
@@ -64,77 +64,27 @@ const Home = () => {
           `,
     },
     {
-      title: "CAN YOU KEEP MY DESIGN PROJECT CONFIDENTIAL?",
+      title: "Can you keep my design project confidential?",
       content: `My portfolio is my only marketing tool so otherwise stated, I keep the right to display the outcome of any design order in the SOSFactory portfolio, blog or social profiles in order to promote my work.
     
           If you need a Non-Disclosure Agreement signed by me, please let me know upfront as it may chance the price of the service.`,
     },
     {
-      title: "CAN I MAKE MODIFICATIONS TO MY DESIGN?",
+      title: "Can i make modifications to my design?",
       content: `Art is very personal and requires expert skills, it’s also about style, if you make changes it could lose all consistency.
     
             If after your project is finished you want make any change I suggest you contact me to discuss your new needs, I will do everything on my hand to achieve your new goals at the minimum cost.`,
     },
     {
-      title: "WHICH PAYMENT METHODS CAN I USE TO ORDER MY COMPANY BRANDING?",
+      title: "Which payment method can i use to order my company branding?",
       content: `The most common and quick payment is PayPal, altough I also accept bank transfer or any other secure payment method like Western Union.`,
     },
     {
       title:
-        "I CAN'T AFFORD YOUR SERVICES... CAN YOU OFFER ME MORE AFFORDABLE SOLUTIONS?",
+        "I can't afford your services... can you offer me more affordable solutions?",
       content: `Yes, from time to time I like to create mascot and logos just for fun,  a way to monetise this hobby is selling it as royalty stock design.
     
             Otherwise stated you can use this design for commercial purposes as long as you don’t sell it, license it or redistribute it.`,
-    },
-  ];
-  const imageSrc = [
-    {
-      id: 1,
-      name: "row_one",
-      images: [
-        {
-          src_one: require("../../common/assets/projects/15.png"),
-          src_two: require("../../common/assets/projects/16.jpg"),
-          src_three: require("../../common/assets/projects/7.png"),
-          src_four: require("../../common/assets/projects/8.png"),
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: "row_one",
-      images: [
-        {
-          src_one: require("../../common/assets/projects/15.png"),
-          src_two: require("../../common/assets/projects/16.jpg"),
-          src_three: require("../../common/assets/projects/7.png"),
-          src_four: require("../../common/assets/projects/8.png"),
-        },
-      ],
-    },
-    {
-      id: 3,
-      name: "row_one",
-      images: [
-        {
-          src_one: require("../../common/assets/projects/15.png"),
-          src_two: require("../../common/assets/projects/16.jpg"),
-          src_three: require("../../common/assets/projects/7.png"),
-          src_four: require("../../common/assets/projects/8.png"),
-        },
-      ],
-    },
-    {
-      id: 4,
-      name: "row_one",
-      images: [
-        {
-          src_one: require("../../common/assets/projects/15.png"),
-          src_two: require("../../common/assets/projects/16.jpg"),
-          src_three: require("../../common/assets/projects/7.png"),
-          src_four: require("../../common/assets/projects/8.png"),
-        },
-      ],
     },
   ];
 
@@ -166,7 +116,7 @@ const Home = () => {
     <Wrapper>
       {/* Design Services */}
       <section
-        className="  space-y-4 py-8 px-24 bg-[#512995]"
+        className="  space-y-4 px-12 py-4 lg:py-8 lg:px-24 bg-[#512995]"
       >
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-5xl font-bold rounded-lg inter">
           Design Services I Provide
@@ -205,7 +155,7 @@ const Home = () => {
         <p className="text-center nunito text-gray-300 my-6">
           Here are some of our masterpieces that clients love it so much!
         </p>
-        <div className="grid lg:grid-cols-4 gap-6 grid-cols-2 px-24">
+        <div className="grid lg:grid-cols-4 gap-6 grid-cols-2 px-4 lg:px-24">
           {items.map((item) => (
             <img src={item.attributes.url} alt="" />
           ))}
@@ -223,10 +173,10 @@ const Home = () => {
         </button>
         <NumberCount trackRecord={trackRecord} />
       </section>
-      <section className="  flex md:flex-col lg:flex-row items-center justify-evenly p-24 bg-[#512995] text-white">
+      <section className="flex flex-col lg:flex-row items-center justify-evenly p-4 lg:p-24 bg-[#512995] text-white">
         <img className="w-[300px] h-[300px]" src={Man} alt="" />
         <div className="lg:w-[50%] space-y-8 w-full">
-          <h1 className="text-3xl font-bold text-center w-1/2 lg:text-left">
+          <h1 className="text-3xl font-bold text-center w-full lg:w-1/2 lg:text-left">
             Get To Know More About Us
           </h1>
           <p className="lg:text-left text-center">
@@ -237,17 +187,19 @@ const Home = () => {
             good business. We also help my fellow illustrator and designer
             through my blog and social media.
           </p>
-          <button className="flex flex-row items-center space-x-2">
+          <button className="flex flex-row mx-auto lg:ml-0 items-center space-x-2">
           <p>Know More</p> <BsArrowRight />
           </button>
         </div>
       </section>
       <section className="  flex items-center flex-col space-y-4 bg-[#512995] text-white">
-          <h1 className="text-3xl w-3/4 text-center font-semibold">Working in the new era need a partner that <br/> not only have an experience but added value.</h1>
+          <h1 className="text-base lg:text-3xl w-full lg:w-3/4 text-center font-semibold">Working in the new era need a partner that <br/> not only have an experience but added value.</h1>
           <img src={Avatar} alt='' className="h-[144px] w-[144px]"/>
+          <div className="text-center">
           <h1 className="text-white font-bold text-2xl">Doni Kudjo</h1>
           <p>CEO of Arkan Studio</p>
-          <div className="grid grid-cols-3 lg:grid-cols-5 gap-4">
+          </div>
+          <div className="grid grid-cols-3 px-4 lg:grid-cols-5 gap-4">
             <div className="font-bold text-lg justify-evenly flex row gap-2">
               <img alt='' src={Layers} className='h-[32px] w-[32px]' />
               Layers
@@ -273,7 +225,7 @@ const Home = () => {
       {/* FAQ */}
       <section className="  p-8 bg-[#512995]">
         <p className="mx-auto text-center p-4 text-white text-lg md:text-2xl lg:text-4xl font-bold rounded-lg inter">
-          FREQUENTLY ASKED QUESTIONS
+          Frequently Asked Questions
         </p>
         <p className="text-center mb-16 text-gray-300">Everything you need to know about the service and products.</p>
         {/* disclosure */}
@@ -283,8 +235,8 @@ const Home = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full justify-between bg-transparent px-4 py-2 text-left text-base lg:text-lg font-semibold focus:outline-none">
-                      <span className="lg:w-3/4 text-white w-4/5">{item.title}</span>
+                    <Disclosure.Button className="flex w-full justify-between bg-transparent py-2 text-left text-base lg:text-lg font-semibold focus:outline-none">
+                      <span className="lg:w-3/4 text-white w-full">{item.title}</span>
                       <AiFillCaretDown
                         className={`${
                           open ? "rotate-180 transform" : ""

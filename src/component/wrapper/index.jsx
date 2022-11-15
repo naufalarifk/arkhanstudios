@@ -19,7 +19,7 @@ function Wrapper({ children }) {
           className="lg:w-[100vw] lg:h-[900px] lg:bg-[length:100vw_125vh] bg-[length:100vw_50vh] w-[100vw] h-[50vh] flex flex-col px-8 md:px-32"
         >
           {splitLocation[1] === "" ? (
-            <h1 className="text-white font-bold mt-24 md:mt-12 lg:mt-36 text-lg lg:text-8xl">
+            <h1 className="text-white font-bold mt-16 lg:mt-36 text-lg lg:text-8xl">
               We Are
               <br /> Arkhan
               <br /> Studio
@@ -29,20 +29,20 @@ function Wrapper({ children }) {
             splitLocation[1] === "kawai-design" ||
             splitLocation[1] === "other-design" ||
             splitLocation[1] === "storybook" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-56 text-lg lg:text-7xl">
+            <h1 className="text-white font-bold mt-16 lg:mt-56 text-lg lg:text-7xl">
               We Believe Good <br /> Visual is A Good <br /> Business
             </h1>
           ) : splitLocation[1] === "blogs" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-7xl">
+            <h1 className="text-white font-bold mt-16 lg:mt-36 text-lg lg:text-7xl">
               Stay Updated! <br /> We Share <br /> Something Nice <br /> About
               Art!
             </h1>
           ) : splitLocation[1] === "about" ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-7xl">
+            <h1 className="text-white font-bold mt-16 lg:mt-36 text-lg lg:text-7xl">
               Get to know <br /> More About <br /> Arkhan Studio
             </h1>
           ) : splitLocation[1] === `contact` ? (
-            <h1 className="text-white font-bold mt-4 md:mt-12 lg:mt-36 text-lg lg:text-7xl">
+            <h1 className="text-white font-bold mt-16 lg:mt-36 text-lg lg:text-7xl">
               Let&apos;s Share and <br /> Discuss About <br /> Your Idea{" "}
             </h1>
           ) : null}
@@ -50,11 +50,11 @@ function Wrapper({ children }) {
             One Stop Professional Illustration <br /> Service for Mascot,
             Cartoon, T-Shirt, <br /> and Storybook.{" "}
           </p>
-          <div className="flex flex-row space-x-3 lg:space-x-4 mt-5 lg:mt-10">
-            <button className="text-white bg-[#7f56d9] text-xs lg:text-base px-10 py-2">
+          <div className="flex flex-row space-x-2 lg:space-x-4 mt-5 lg:mt-10">
+            <button className="text-white bg-[#7f56d9] text-xs px-4 lg:text-base lg:px-10 py-2">
               <p className="font-semibold">BOOK A SERVICE</p>
             </button>
-            <button className="text-white text-xs lg:text-base px-10 py-2 bg-transparent border-2">
+            <button className="text-white text-xs lg:text-base px-4 lg:px-10 py-2 bg-transparent border-2">
               <p className="font-semibold">ABOUT US</p>
             </button>
           </div>

@@ -32,8 +32,8 @@ function Services() {
     },
   ];
   return (
-    <section className="bg-[#512995] px-24 py-12 space-y-12">
-      <div className="text-white w-1/2 mx-auto">
+    <section className="bg-[#512995] px-12 lg:px-24 py-12 space-y-12">
+      <div className="text-white w-full lg:w-1/2 mx-auto">
         <h1 className="text-center font-bold text-4xl">
           Pro Team & Mannered Way of Working
         </h1>
@@ -42,9 +42,9 @@ function Services() {
           about the idea and our team will do the rest
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4 nunito text-white">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 nunito text-white">
         {servicesData.map((item) => (
-          <div className={`px-4 pb-4 space-y-6 flex flex-row items-center`}>
+          <div className={`px-4 pb-4 space-y-6 flex flex-col lg:flex-row items-center`}>
             <img
               className="lg:h-[200px] lg:w-[200px] h-[100px] w-[100px]"
               style={{
@@ -53,17 +53,17 @@ function Services() {
               src={item.picture}
               alt=""
             />
-            <div className="space-y-2 flex flex-col nunito">
-              <h1 className="font-bold text-base text-left">{item.name}</h1>
-              <p className="text-sm text-left">{item.desc}</p>
+            <div className="space-y-2 flex flex-col text-center lg:text-left nunito">
+              <h1 className="font-bold text-base">{item.name}</h1>
+              <p className="text-sm">{item.desc}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="flex flex-row items-center justify-evenly">
-        <div className="space-y-4 w-1/2 text-white">
-          <h1 className="font-bold text-4xl">Get to Know About Mascot</h1>
-          <p className="">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-evenly">
+        <div className="space-y-4 w-full lg:w-1/2 text-white">
+          <h1 className="font-bold text-2xl text-center mt-4 lg:mt-0 lg:text-left lg:text-4xl">Get to Know About Mascot</h1>
+          <p className="lg:text-left text-center">
             A mascot is any human, animal, or object thought to represent a
             group with a common public identity, such as a school, professional
             sports team, society, military unit, or brand name. Mascots are also
@@ -73,7 +73,7 @@ function Services() {
             is especially true when the team's nickname is something that is a
             living animal and/or can be made to have humanlike characteristics.
           </p>
-          <button className="bg-[#7F56D9] text-white px-4 py-2">
+          <button className="bg-[#7F56D9] text-white px-4 py-2 lg:w-auto w-full">
             BOOK A SERVICE
           </button>
         </div>
@@ -85,48 +85,48 @@ function Services() {
           We deliver the quality, we know your time is limited. Let&apos;s talk
           about the idea and our team will do the rest
         </p>
-        <div className="grid grid-cols-5 gap-6">
+        <div className="grid lg:grid-cols-5 grid-cols-1 gap-6">
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
-              <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
+              <BiCheckCircle className="text-white mx-auto lg:ml-0" size={22} />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px] hidden lg:block" />
             </div>
-            <p className="w-4/5">
+            <p className="w-full text-center mt-2 lg:w-4/5">
               You send 50% down payment & we work in the brief of the project.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
-              <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
+              <BiCheckCircle className="text-white mx-auto lg:ml-0" size={22} />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px] hidden lg:block" />
             </div>
-            <p className="w-4/5">
+            <p className="w-full text-center mt-2 lg:w-4/5">
               I provide sketches based on the brief of the project.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
-              <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
+              <BiCheckCircle className="text-white mx-auto lg:ml-0" size={22} />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px] hidden lg:block" />
             </div>
-            <p className="w-4/5">
+            <p className="w-full text-center mt-2 lg:w-4/5">
               You review the sketches and I make all corrections needed.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
-              <BiCheckCircle className="text-white" size={22} />
-              <img src={Arrow} alt="" className="w-[132px] h-[18px]" />
+              <BiCheckCircle className="text-white mx-auto lg:ml-0" size={22} />
+              <img src={Arrow} alt="" className="w-[132px] h-[18px] hidden lg:block" />
             </div>
-            <p className="w-4/5">
+            <p className="w-full text-center mt-2 lg:w-4/5">
             You approve the sketch and I create the final design.
             </p>
           </div>{" "}
           <div className="">
             <div className="flex flex-row justify-between space-x-4 items-center">
-              <BiCheckCircle className="text-white" size={22} />
+              <BiCheckCircle className="text-white mx-auto lg:ml-0" size={22} />
             </div>
-            <p className="w-4/5">
+            <p className="w-full text-center mt-2 lg:w-4/5">
               You approve the sketch and I create the final design.
             </p>
           </div>
