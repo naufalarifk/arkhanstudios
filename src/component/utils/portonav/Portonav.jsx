@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, Transition } from '@headlessui/react'
 import React , { Fragment, useEffect, useRef, useState } from 'react'
+import {FaChevronDown} from 'react-icons/fa'
 
 function Portonav() {
   const { pathname } = useLocation();
@@ -62,8 +63,9 @@ function Portonav() {
       <div className="lg:hidden">
       <Menu as="div" className="flex">
         <div className="mx-auto">
-          <Menu.Button className="mx-auto inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button open className="mx-auto inline-flex items-center gap-x-2 w-full justify-center bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             {splitLocation[1].charAt(0).toUpperCase() + splitLocation[1].slice(1).replace(/-/g, " ")}
+            <FaChevronDown className={``}/>
           </Menu.Button>
         </div>
         <Transition
@@ -75,7 +77,7 @@ function Portonav() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-10 mt-12 w-56 origin-top-right divide-y divide-gray-100 bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-9 mt-12 w-56 origin-top-right divide-y divide-gray-100 bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (

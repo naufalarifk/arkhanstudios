@@ -55,11 +55,11 @@ const Blog = () => {
             {items.map((item, idx) => (
               <div key={idx}>
                 <img
-                  className="h-[220px] w-[320px]"
+                  className="w-[240px] h-[180px] lg:h-[220px] lg:w-[320px]"
                   src={item.attributes.blogCover.data.attributes.url}
                   alt=""
                 />
-                <h1 className="text-2xl font-semibold">
+                <h1 className="text-2xl font-semibold max-w-[80%] truncate">
                   {item.attributes.title}
                 </h1>
                 <p>{item.attributes.desc}</p>
@@ -76,12 +76,14 @@ const Blog = () => {
         ) : (
           <SkeletonBlogList />
         )}
+        <div className="mt-12">
         <Pagination
           innerClass="flex flex-row space-x-6 pagination justify-content-center justify-center"
           itemsCountPerPage={10}
           totalItemsCount={450}
           pageRangeDisplayed={5}
         />
+        </div>
       </section>
     </Wrapper>
   );
